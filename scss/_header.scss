@@ -396,7 +396,7 @@
 		}
 
 		&__blind {
-			width: $headerHeightDesktop;
+			width: 7rem;
 
 			p {
 				text-transform: lowercase;
@@ -404,7 +404,7 @@
 		}
 
 		&__nav {
-			width: calc(100% - #{$headerHeightDesktop});
+			width: calc(100% - 7rem);
 		}
 	}
 
