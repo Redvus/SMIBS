@@ -177,3 +177,77 @@ ul.bxslider {
   font-size: .85em;
   padding: 10px;
 }
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-prev {
+  right: 0;
+  // background: url('images/controls.png') no-repeat 0 -32px;
+  background: url('images/bx_next.svg') no-repeat 50% 50%;
+  background-size: 60% 60%;
+  background-color: $secondary;
+  opacity: 0;
+  // transform: translateX(-50%);
+}
+.bx-prev:hover,
+.bx-prev:focus {
+  background-position: 80% 50%;
+}
+.bx-next {
+  left: 0;
+  // background: url('images/controls.png') no-repeat -43px -32px;
+  background: url('images/bx_prev.svg') no-repeat 50% 50%;
+  background-size: 60% 60%;
+  background-color: $secondary;
+  opacity: 0;
+  // transform: translateX(50%);
+}
+.bx-next:hover,
+.bx-next:focus {
+  background-position: 20% 50%;
+}
+.bx-controls-direction a {
+  position: absolute;
+  // top: 50%;
+  bottom: 0;
+  margin-top: calc((-#{$marginVert}) / 2);
+  outline: 0;
+  width: $marginVert;
+  height: $marginVert;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.bx-controls-direction a.disabled {
+  display: none;
+}
+/* AUTO CONTROLS (START / STOP) */
+.bx-controls-auto {
+  text-align: center;
+}
+.bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url('images/controls.png') -86px -11px no-repeat;
+  margin: 0 3px;
+}
+.bx-controls-auto .bx-start:hover,
+.bx-controls-auto .bx-start.active,
+.bx-controls-auto .bx-start:focus {
+  background-position: -86px 0;
+}
+.bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url('images/controls.png') -86px -44px no-repeat;
+  margin: 0 3px;
+}
+.bx-controls-auto .bx-stop:hover,
+.bx-controls-auto .bx-stop.active,
+.bx-controls-auto .bx-stop:focus {
+  background-position: -86px -33px;
+}
