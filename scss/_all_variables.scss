@@ -174,11 +174,11 @@ $sidebarButtonsBackground: darken($primary, 10%);
     // 	margin-left: 0;
     // }
 
-    // &:nth-of-type(#{$numPerRow}n) {
-    //     // margin-right: 0;
-    //     // margin-bottom: 0;
-    //     padding-right: 0;
-    // }
+     &:nth-of-type(#{$numPerRow}n) {
+          margin-right: 0;
+         // margin-bottom: 0;
+         //padding-right: 0;
+     }
 
     // &:nth-of-type(calc(#{$numPerRow} + 1)n) {
     //     margin-left: 0;
@@ -196,6 +196,45 @@ $sidebarButtonsBackground: darken($primary, 10%);
             padding: calc(#{$padding} / 2);
     	}
     }
+}
+
+@mixin rowMachineFlex($numPerRow, $margin) {
+    width: calc((100% - ((#{$numPerRow} - 1) * #{$margin})) / #{$numPerRow});
+    // width: calc((100% - ((#{$numPerRow} / #{$numPerRow}) * #{$margin})) / #{$numPerRow}); //решение для fenom
+    display: inline-block;
+    //padding: 0 $padding $padding 0;
+
+    &:nth-child(n) {
+        margin-bottom: $margin;
+        margin-right: $margin;
+    }
+
+    // &:first-child {
+    // 	margin-left: 0;
+    // }
+
+    &:nth-of-type(#{$numPerRow}n) {
+        margin-right: 0;
+        // margin-bottom: 0;
+        //padding-right: 0;
+    }
+
+    // &:nth-of-type(calc(#{$numPerRow} + 1)n) {
+    //     margin-left: 0;
+    // }
+
+    // @include grid-media($Medium) {
+    // 	&:nth-child(n) {
+    // 		margin-right: 0;
+    // 	}
+    // }
+
+    //@include grid-media($Small) {
+    //    &:nth-child(n) {
+    //        width: calc((100% - ((#{$numPerRow} - 1) * (#{$margin} / 0.5))) / #{$numPerRow});
+    //        padding: calc(#{$margin} / 2);
+    //    }
+    //}
 }
 
 /*----------  News  ----------*/
