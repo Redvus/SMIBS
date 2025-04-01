@@ -1135,6 +1135,7 @@
 		width: 100%;
 		// @include grid-container;
 		// margin-bottom: $marginVert;
+		overflow: hidden;
 
 		&-block {
 			// @include grid-column(12, $second-grid);
