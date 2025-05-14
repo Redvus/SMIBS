@@ -114,6 +114,23 @@
 				}
 			}
 		}
+
+		&__image {
+			width: 70%;
+			height: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
 	}
 
 	&__background {
@@ -302,6 +319,16 @@
 			i {
 				font-size: $font-size-h2;
 				color: $secondary;
+			}
+		}
+	}
+
+	@include grid-media($XLarge) {
+
+		&-error {
+
+			&__image {
+				width: 60%;
 			}
 		}
 	}

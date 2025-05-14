@@ -237,6 +237,12 @@
 				}
 			}
 		}
+
+		&--error {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 
 	&__hero {
@@ -1129,6 +1135,7 @@
 		width: 100%;
 		// @include grid-container;
 		// margin-bottom: $marginVert;
+		overflow: hidden;
 
 		&-block {
 			// @include grid-column(12, $second-grid);
@@ -1215,8 +1222,11 @@
 	&__read {
 		// @include grid-container;
 		width: 100%;
-		display: block;
-		float: left;
+		//display: block;
+		//float: left;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		min-height: 5rem;
 		// margin-bottom: $marginVert;
 		overflow: hidden;
@@ -1231,6 +1241,7 @@
 			// margin-inline-start: 0;
 			// margin-inline-end: 0;
 			@include rowMachine(6, calc(#{$marginVert} / 2));
+			//width: calc((100% / 3) - #{$marginVert});
 			min-height: 10rem;
 			//background-color: $layoutBackground;
 			transition: all $base-duration;
@@ -1262,10 +1273,10 @@
 			// 	}
 			// }
 
-			&--all {
-				@include rowMachinePadding(6, calc(#{$marginVert} / 2));
-				background-color: $layoutBackground;
-			}
+			//&--all {
+			//	@include rowMachinePadding(6, calc(#{$marginVert} / 2));
+			//	background-color: $layoutBackground;
+			//}
 		}
 
 		figcaption {
@@ -1334,11 +1345,13 @@
 		@include grid-media($XSmall) {
 
 			&-single {
-				@include rowMachine(3, calc(#{$marginVert} / 2));
+				//@include rowMachine(3, calc(#{$marginVert} / 2));
+				 @include rowMachineFlex(3, calc(#{$marginVert} / 2));
 
-				&--all {
-					@include rowMachinePadding(3, calc(#{$marginVert} / 2));
-				}
+
+				//&--all {
+				//	@include rowMachinePadding(3, calc(#{$marginVert} / 2));
+				//}
 			}
 		}
 
@@ -3320,3 +3333,9 @@
 
 /*=====  End of Page content  ======*/
 
+#readGridder {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
