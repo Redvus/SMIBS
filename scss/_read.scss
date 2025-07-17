@@ -6,7 +6,7 @@
 	padding: 0 calc(#{$marginVert} / 2);
 
 	&__image {
-		width: $frontReadImageWidth;
+		width: 30%;
 		min-height: 100%;
 		display: block;
 		float: left;
@@ -71,11 +71,32 @@
 
 	&__introtext {
 		width: calc(100% - #{$marginVert});
-		display: block;
-		background-color: $primary;
-		padding: calc(#{$marginVert} / 3) calc(#{$marginVert} / 2);
-		font-size: $font-size-small;
+		display: flex;
+		flex-direction: row;
+		// padding: calc(#{$marginVert} / 3) calc(#{$marginVert} / 2);
 		margin-bottom: calc(#{$marginVert} / 2);
+
+		&__date {
+			width: calc(30% - #{$marginVert});
+			display: flex;
+			flex-direction: column;
+			// align-items: center;
+			justify-content: center;
+			font-size: $font-size-base;
+			font-weight: bold;
+			color: $layoutBackground;
+			padding: calc(#{$marginVert} / 2);
+			background-color: $secondary;
+		}
+
+		&__info {
+			width: calc(70% - #{$marginVert});
+			display: block;
+			font-size: $font-size-small;
+			color: $secondary;
+			background-color: $primary;
+			padding: calc(#{$marginVert} / 2);
+		}
 	}
 
 	&__link {
@@ -117,11 +138,11 @@
 	@include grid-media($XXLarge) {
 
 		&__image {
-			width: $frontReadImageWidth;
+			width: 25%;
 		}
 
 		&__content {
-			width: calc(100% - #{$frontReadImageWidth} - #{$marginVert});
+			width: calc(75% - #{$marginVert});
 		}
 
 		&__introtext {
@@ -140,11 +161,11 @@
 	@include grid-media($XLarge) {
 
 		&__image {
-			width: $frontReadImageWidth;
+			width: 25%;
 		}
 
 		&__content {
-			width: calc(100% - #{$frontReadImageWidth} - #{$marginVert});
+			width: calc(75% - #{$marginVert});
 		}
 
 		// &__link {
@@ -159,11 +180,11 @@
 	@include grid-media($Large) {
 
 		&__image {
-			width: $frontReadImageWidth;
+			width: 30%;
 		}
 
 		&__content {
-			width: calc(100% - #{$frontReadImageWidth} - #{$marginVert});
+			width: calc(70% - #{$marginVert});
 		}
 
 		// &__link {
