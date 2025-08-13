@@ -44,7 +44,8 @@ $footerBackground : $secondary;
 $footerDownBlock : lighten($secondary, 10%);
 
 /*----------  Layout  ----------*/
-$layoutBackground : lighten($primary, 13%);
+// $layoutBackground : lighten($primary, 13%);
+$layoutBackground : $fourth;
 $backgroundLineColor : lighten($third, 85%);
 $wrapperContentInsideWidth: calc(100% - ((#{$headerHeightDesktop} + 3rem) * 2));
 
