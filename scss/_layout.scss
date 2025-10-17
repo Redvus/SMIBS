@@ -1,12 +1,17 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /*! @group Layout */
 /* ========================================================================== */
 .wrapper {
-	@include grid-container;
+	// @include grid-container;
 	min-height: 100vh;
 	display: block;
 	position: relative;
 	// margin-bottom: calc(300px + 4rem);
-	background-color: $layoutBackground;
+	background-color: var(--layoutBackground);
 	//transition: all .3s;
 	animation: fadeIn 0.6s ease-in-out;
 	// box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
@@ -28,7 +33,7 @@
 			svg {
 				width: 100%;
 				height: auto;
-				stroke: lighten($secondary, 70%);
+				stroke: var(--secondary-lighten-70);
 				stroke-width: 5;
 				fill: none;
 				padding: 1rem;
@@ -48,7 +53,7 @@
 			left: 0;
 
 			h2 {
-				font-size: $font-size-h1;
+				font-size: var(--font-size-h1);
 				animation: fadeIn 3s ease-in-out;
 				//animation-delay: 2s;
 			}
@@ -70,7 +75,7 @@
 				justify-content: center;
 				align-items: center;
 				position: relative;
-				border: 1px solid $primary;
+				border: 1px solid var(--primary);
 				background-color: #fff;
 				overflow: hidden;
 				transition: background-color 0.3s cubic-bezier(.4,0,.2,1);
@@ -84,7 +89,7 @@
 					bottom: 0;
 					right: 0;
 					position: absolute;
-					background-color: $primary;
+					background-color: var(--primary);
 					z-index: 1;
 					//box-sizing: border-box;
 					transition: transform 0.45s cubic-bezier(.4,0,.2,1) 75ms;
@@ -94,7 +99,7 @@
 
 				svg {
 					fill: none;
-					stroke: $primary;
+					stroke: var(--primary);
 					stroke-width: 6;
 					z-index: 10;
 					transition: all 0.3s;
@@ -269,7 +274,7 @@
 		padding: calc(#{$paddingMobile} * 3);
 		top: 0;
 		right: 0;
-		background-color: $layoutBackground;
+		background-color: var(--layoutBackground);
 		z-index: 9998;
 		//transform: translateX(100%);
 		//opacity: 0;
@@ -282,7 +287,7 @@
 			position: fixed;
 			top: 0;
 			left: 0;
-			background-color: rgba($secondary, 50%);
+			background-color: rgba(var(--secondary), 50%);
 			//opacity: 0;
 			z-index: 9995;
 		}
@@ -309,7 +314,7 @@
 			align-items: center;
 			justify-content: center;
 			position: absolute;
-			background-color: $layoutBackground;
+			background-color: var(--layoutBackground);
 			border-radius: 50%;
 			top: 50%;
 			right: 100%;
@@ -317,13 +322,13 @@
 			cursor: pointer;
 
 			i {
-				font-size: $font-size-h2;
-				color: $secondary;
+				font-size: var(--font-size-h2);
+				color: var(--secondary);
 			}
 		}
 	}
 
-	@include grid-media($XLarge) {
+	@include bp.media-up('XLarge') {
 
 		&-error {
 
@@ -333,11 +338,11 @@
 		}
 	}
 
-	@include grid-media($Medium) {
+	@include bp.media-up('Medium') {
 		//padding: 6rem 1rem 0;
 	}
 
-	@include grid-media($XSmall) {
+	@include bp.media-up('XSmall') {
 
 		&_news {
 			padding-right: 0;
@@ -356,7 +361,7 @@
 		}
 	}
 
-	@include grid-media($Small) {
+	@include bp.media-up('Small') {
 		z-index: 10;
 
 		&__background {
@@ -367,7 +372,7 @@
 }
 
 .filled {
-	fill: $primary;
+	fill: var(--primary);
 }
 /* @end  */
 
@@ -377,8 +382,8 @@
 	width: 26px;
 	height: 40px;
 	display: block;
-	//background-color: $secondary;
-	border: 2px solid $primary;
+	//background-color: var(--secondary);
+	border: 2px solid var(--primary);
 	border-radius: 20px;
 	//border-top-left-radius: 25px;
 	//border-top-right-radius: 25px;
@@ -399,11 +404,11 @@
 		animation-iteration-count: infinite;
 
 		line, polyline {
-			stroke: $primary;
+			stroke: var(--primary);
 		}
 	}
 
-	@include grid-media($Small) {
+	@include bp.media-up('Small') {
 		visibility: hidden;
 	}
 }

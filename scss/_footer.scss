@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /*==============================
 =            Footer            =
 ==============================*/
@@ -11,7 +16,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
     position: relative;
     background: $footerBackground;
     bottom: 0;
-    color: $fourth;
+    color: var(--fourth);
     z-index: 10;
     overflow: hidden;
 
@@ -20,7 +25,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         height: 10rem;
         display: flex;
         flex-direction: row;
-        font-size: $font-size-small;
+        font-size: var(--font-size-small);
         padding: calc(#{$marginVert} / 2) 0;
     }
 
@@ -37,11 +42,11 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
 
         a {
-            color: $primary;
+            color: var(--primary);
             font-weight: normal;
 
             &:hover {
-                color: $fourth;
+                color: var(--fourth);
             }
         }
     }
@@ -63,7 +68,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
             height: 80%;
 
             path {
-                fill: $fourth;
+                fill: var(--fourth);
             }
         }
 
@@ -116,14 +121,14 @@ $footer-grid: (columns: 1, gutter: 5rem);
                 margin-bottom: calc(#{$marginVert} / 4);
 
                 i {
-                    font-size: $font-size-large + 0.2;
+                    font-size: var(--font-size-large) + 0.2;
                 }
 
                 svg {
-                    height: $font-size-base;
+                    height: var(--font-size-base);
 
                     path {
-                        fill: $primary;
+                        fill: var(--primary);
                     }
                 }
 
@@ -132,7 +137,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
                     svg {
 
                         path {
-                            fill: $fourth;
+                            fill: var(--fourth);
                         }
                     }
                 }
@@ -149,7 +154,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         // bottom: 0;
         // border-top: 1px solid #fff;
         background-color: $footerDownBlock;
-        font-size: $font-size-small - 0.2;
+        font-size: var(--font-size-small) - 0.2;
 
         p {
             margin: 0;
@@ -175,7 +180,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
             width: 88px;
             height: 31px;
             display: inline-block;
-            //background-color: $primary;
+            //background-color: var(--primary);
             margin-right: calc(#{$marginVert} / 2);
 
             &:last-child {
@@ -194,10 +199,10 @@ $footer-grid: (columns: 1, gutter: 5rem);
         text-align: right;
 
         a {
-            color: $primary;
+            color: var(--primary);
 
             &:hover {
-                color: $fourth;
+                color: var(--fourth);
             }
         }
     }
@@ -225,7 +230,23 @@ $footer-grid: (columns: 1, gutter: 5rem);
         visibility: hidden;
     }
 
-    @include grid-media($XXLarge) {
+    // @include grid-media($XXLarge) {
+
+    //     &__adress {
+
+    //         &--desktop {
+    //             display: block;
+    //             visibility: visible;
+    //         }
+
+    //         &--mobile {
+    //             display: none;
+    //             visibility: hidden;
+    //         }
+    //     }
+    // }
+
+    @include bp.media-up('XLarge') {
 
         &__adress {
 
@@ -241,7 +262,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
     }
 
-    @include grid-media($XLarge) {
+    @include bp.media-up('Large') {
 
         &__adress {
 
@@ -257,7 +278,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
     }
 
-    @include grid-media($Large) {
+    @include bp.media-up('Medium') {
 
         &__adress {
 
@@ -273,23 +294,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
     }
 
-    @include grid-media($Medium) {
-
-        &__adress {
-
-            &--desktop {
-                display: block;
-                visibility: visible;
-            }
-
-            &--mobile {
-                display: none;
-                visibility: hidden;
-            }
-        }
-    }
-
-    @include grid-media($XSmall) {
+    @include bp.media-up('XSmall') {
         height: inherit;
         z-index: 1;
 
@@ -342,7 +347,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
             text-align: center;
 
             a {
-                font-size: $font-size-small;
+                font-size: var(--font-size-small);
             }
         }
 
@@ -370,7 +375,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
     }
 
-    @include grid-media($Small) {
+    @include bp.media-up('Small') {
         height: inherit;
         z-index: 1;
 
@@ -423,7 +428,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
             text-align: center;
 
             a {
-                font-size: $font-size-small;
+                font-size: var(--font-size-small);
             }
         }
 
@@ -466,9 +471,9 @@ $footer-grid: (columns: 1, gutter: 5rem);
     z-index: 500;
     transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
-    background-color: $secondary;
-    @include border-top-radius(0.3rem);
-    @include border-bottom-radius(0.3rem);
+    background-color: var(--secondary);
+    // @include border-top-radius(0.3rem);
+    // @include border-bottom-radius(0.3rem);
     transform: translate(-2rem, -0.5rem);
 
     &--shown {
@@ -495,14 +500,14 @@ $footer-grid: (columns: 1, gutter: 5rem);
         background-color: transparent;
 
         i {
-            color: $primary;
-            font-size: $font-size-large;
+            color: var(--primary);
+            font-size: var(--font-size-large);
         }
 
         &:hover {
 
             i {
-                color: $fourth;
+                color: var(--fourth);
             }
         }
     }
@@ -511,12 +516,12 @@ $footer-grid: (columns: 1, gutter: 5rem);
         display: flex;
         align-items: center;
         padding: 0.3rem;
-        font-size: $font-size-small;
-        color: $primary;
+        font-size: var(--font-size-small);
+        color: var(--primary);
     }
 
     &__triangle {
-        background-color: $secondary;
+        background-color: var(--secondary);
         width: 18px;
         height: 18px;
         position: absolute;
