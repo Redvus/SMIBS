@@ -16,12 +16,12 @@
 // @use "preloader";
 @use "layout";
 @use "footer";
-//@use "header";
-//@use "sidebar";
-//@use "nav";
-//@use "tickets";
-//@use "easycomm";
-//@use "growl";
+@use "header";
+@use "sidebar";
+@use "nav";
+@use "tickets";
+@use "easycomm";
+@use "growl";
 //@use "blind";
 //@use "blind_bw";
 //@use "blind_wb";
@@ -36,7 +36,7 @@
 //@use "tiny-slider";
 //@use "bxslider";
 //
-//@use "page";
+@use "page";
 //@use "calendar";
 //@use "read";
 //@use "news";

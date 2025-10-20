@@ -1,3 +1,7 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
 
 /*===============================
 =            Sidebar            =
@@ -9,7 +13,7 @@
     min-height: 100vh;
 	display: block;
 	float: left;
-    background-color: $primary;
+    background-color: var(--primary);
 	position: relative;
 	z-index: 9992;
 
@@ -18,7 +22,7 @@
 		width: calc(((100% / 12) * 2) + (#{$headerBlindWidth} / 2));
 		height: 100vh;
 		display: block;
-		background-color: $primary;
+		background-color: var(--primary);
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -51,7 +55,7 @@
 			// transform: translate(-50%, -50%);
 
 			path {
-				fill: $secondary;
+				fill: var(--secondary);
 			}
 		}
 
@@ -70,8 +74,8 @@
 		}
 
 		p {
-			font-size: $font-size-small;
-			color: $secondary;
+			font-size: var(--font-size-small);
+			color: var(--secondary);
 		}
 	}
 
@@ -117,12 +121,12 @@
 				margin-right: calc(#{$marginVert} / 2);
 
 				a {
-					font-size: $font-size-small;
-					color: $secondary;
+					font-size: var(--font-size-small);
+					color: var(--secondary);
 				}
 
 				i {
-					color: $secondary;
+					color: var(--secondary);
 					margin-right: calc(#{$marginVert} / 4);
 				}
 
@@ -167,18 +171,18 @@
 				display: block;
 				position: relative;
 				float: left;
-				border: $border_thin solid $secondary;
+				border: $border_thin solid var(--secondary);
 				border-bottom: none;
 				padding: 0 calc(#{$marginVert} / 4);
 				// margin-bottom: $marginVert / 4;
-				background-color: $primary;
+				background-color: var(--primary);
 				color: $formInputColor;
 				transition: all 0.3s;
 
 				&:focus,
 				&:visited {
 					color: $formInputColor;
-					background-color: $fourth;
+					background-color: var(--fourth);
 					border-color: $formInputColor;
 					outline: none;
 				}
@@ -222,7 +226,7 @@
 			}
 
 			[type="password"] {
-				border-bottom: $border_thin solid $secondary;
+				border-bottom: $border_thin solid var(--secondary);
 			}
 		}
 
@@ -232,7 +236,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background-color: $secondary;
+			background-color: var(--secondary);
 			margin-left: calc(#{$marginVert} / 4);
 			border-top-left-radius: calc(#{$border_normal} * 2);
 			border-bottom-left-radius: calc(#{$border_normal} * 2);
@@ -240,25 +244,25 @@
 			border-bottom-right-radius: calc(#{$border_normal} * 2);
 
 			a {
-				color: $primary;
+				color: var(--primary);
 			}
 
 			&:hover {
 
 				a {
-					color: $fourth;
+					color: var(--fourth);
 				}
 			}
 
 			&--enter {
 				outline: none;
 				border: none;
-				color: $primary;
-				font-size: $font-size-base;
+				color: var(--primary);
+				font-size: var(--font-size-base);
 				cursor: pointer;
 
 				&:hover {
-					color: $fourth;
+					color: var(--fourth);
 				}
 			}
 		}
@@ -272,9 +276,9 @@
 			margin-right: calc(#{$marginVert} / 2);
 
 			& > span {
-				font-size: $font-size-large;
-				font-family: $heading-font;
-				color: $secondary;
+				font-size: var(--font-size-large);
+				font-family: var(--heading-font);
+				color: var(--secondary);
 				line-height: 1;
 			}
 		}
@@ -302,13 +306,13 @@
 			display: block;
 			float: left;
 			position: relative;
-			background-color: $primary;
+			background-color: var(--primary);
 			text-align: center;
-			font-size: $font-size-small;
-			color: $secondary;
+			font-size: var(--font-size-small);
+			color: var(--secondary);
 			margin-bottom: calc(#{$marginVert} / 2);
 			padding: calc(#{$marginVert} / 5) calc(#{$marginVert} / 3);
-			border: $border_thin solid $secondary;
+			border: $border_thin solid var(--secondary);
 			border-top-left-radius: calc(#{$border_normal} * 2);
 			border-bottom-left-radius: calc(#{$border_normal} * 2);
 			border-top-right-radius: calc(#{$border_normal} * 2);
@@ -397,8 +401,8 @@
 				float: left;
 				position: relative;
 				text-align: center;
-				font-size: $font-size-small;
-				color: $secondary;
+				font-size: var(--font-size-small);
+				color: var(--secondary);
 				margin-bottom: 0;
 				padding: 0;
 				background-color: transparent;
@@ -413,8 +417,8 @@
 				&:after {
 					content:"\f061";
 					font-family: 'fontawesome';
-					font-size: $font-size-h2;
-					color: $secondary;
+					font-size: var(--font-size-h2);
+					color: var(--secondary);
 					position: absolute;
 					margin-left: calc(#{$marginVert} / 3);
 					top: 0;
@@ -427,8 +431,8 @@
 
 			&:hover {
 				background-color: $layoutBackground;
-				// color: $primary;
-				box-shadow: $border_normal $border_normal $border_normal $secondary;
+				// color: var(--primary);
+				box-shadow: $border_normal $border_normal $border_normal var(--secondary);
 
 				&.sidebar__buttons--link {
 					background-color: transparent;
@@ -479,47 +483,47 @@
 		}
 	}
 
-	@include grid-media($XXLarge) {
+	// @include grid-media($XXLarge) {
+
+	// 	&__buttons {
+
+	// 		a {
+	// 			font-size: var(--font-size-large);
+	// 			height: $marginVert * 3;
+
+	// 			span {
+	// 				width: calc(100% - (#{$marginVert} * 3) - 1rem);
+	// 				padding: 0 0 0 1rem;
+	// 			}
+
+	// 			picture {
+	// 				width: $marginVert * 3;
+	// 				height: $marginVert * 3;
+	// 			}
+
+	// 			&.sidebar__buttons--ellibrary {
+	// 				height: $marginVert * 3;
+
+	// 				> span {
+	// 					width: calc(100% - (#{$marginVert} * 3) - 1rem);
+	// 					padding: 0 0 0 1rem;
+	// 				}
+
+	// 				> picture {
+	// 					width: $marginVert * 3;
+	// 					height: $marginVert * 3;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	@include bp.media-up('XLarge') {
 
 		&__buttons {
 
 			a {
-				font-size: $font-size-large;
-				height: $marginVert * 3;
-
-				span {
-					width: calc(100% - (#{$marginVert} * 3) - 1rem);
-					padding: 0 0 0 1rem;
-				}
-
-				picture {
-					width: $marginVert * 3;
-					height: $marginVert * 3;
-				}
-
-				&.sidebar__buttons--ellibrary {
-					height: $marginVert * 3;
-
-					> span {
-						width: calc(100% - (#{$marginVert} * 3) - 1rem);
-						padding: 0 0 0 1rem;
-					}
-
-					> picture {
-						width: $marginVert * 3;
-						height: $marginVert * 3;
-					}
-				}
-			}
-		}
-	}
-
-	@include grid-media($XLarge) {
-
-		&__buttons {
-
-			a {
-				font-size: $font-size-base;
+				font-size: var(--font-size-base);
 				height: $marginVert * 2.5;
 
 				span {
@@ -554,12 +558,12 @@
 	// 	&__buttons {
 
 	// 		a {
-	// 			font-size: $font-size-small;
+	// 			font-size: var(--font-size-small);
 	// 		}
 	// 	}
 	// }
 
-	@include grid-media($Medium) {
+	@include bp.media-up('Medium') {
 
 		&__buttons {
 
@@ -577,7 +581,7 @@
 		}
 	}
 
-	@include grid-media($XSmall) {
+	@include bp.media-up('XSmall') {
 		display: none;
 		visibility: hidden;
 
@@ -587,7 +591,7 @@
 		}
 	}
 
-	@include grid-media($Small) {
+	@include bp.media-up('Small') {
 		display: none;
 		visibility: hidden;
 
@@ -607,7 +611,7 @@
 .widget {
 
 	&__selectTag {
-		font-size: $font-size-large !important;
+		font-size: var(--font-size-large) !important;
 	}
 }
 

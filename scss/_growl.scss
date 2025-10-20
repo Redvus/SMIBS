@@ -1,3 +1,7 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
 
 /*=============================================
 =            Growl            =
@@ -6,7 +10,7 @@
 .jGrowl {
 	z-index: 99999;
 	font-size: 12px;
-	color: $fourth;
+	color: var(--fourth);
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	position: fixed;
 }
@@ -20,7 +24,7 @@
 	right: 0;
 	top: $headerHeightDesktop;
 
-	@include grid-media($XSmall) {
+	@include bp.media-up('XSmall') {
 		right: 0;
 		top: 0;
 	}
@@ -113,7 +117,7 @@
 	font-weight: 700;
 	text-align: center;
 
-	@include grid-media($Small) {
+	@include bp.media-up('Small') {
 		width: calc(100% - 1rem);
 	}
 }
@@ -139,18 +143,18 @@ div.jGrowl>.ui-state-highlight {
 }
 
 .af-message-success {
-	color: $third !important;
-	background-color: $success !important;
+	color: var(--third) !important;
+	background-color: var(--success) !important;
 }
 
 .af-message-error {
-	color: $fourth;
-	background-color: $error !important;
+	color: var(--fourth);
+	background-color: var(--error) !important;
 }
 
 .af-message-info {
-	color: $third !important;
-	background-color: $success !important;
+	color: var(--third) !important;
+	background-color: var(--success) !important;
 }
 
 

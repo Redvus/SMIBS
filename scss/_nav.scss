@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /*==================================
 =            Nav Mobile            =
 ==================================*/
@@ -18,7 +23,7 @@
 			a {
 				height: 100%;
 				font: {
-					family: $heading-font;
+					family: var(--heading-font);
 				};
 				color: $navLinkColor;
 			}
@@ -43,7 +48,7 @@
 
 					#navCrossVert {
 						fill: none;
-						stroke: $secondary;
+						stroke: var(--secondary);
 						stroke-width: 0.2rem;
 						transform-origin: 50% 50%;
 						transition: transform .2s;
@@ -51,7 +56,7 @@
 
 					#navCrossHorz {
 						fill: none;
-						stroke: $secondary;
+						stroke: var(--secondary);
 						stroke-width: 0.2rem;
 						transform-origin: 50% 50%;
 						transition: transform .2s;
@@ -65,7 +70,7 @@
 				top: calc(#{$headerHeightDesktop} / 2);
 				margin-left: calc((-#{$marginVert}) / 3);
 				background-color: $navBackground;
-				box-shadow: 0 0.1rem 0.1rem rgba($third, 0.2);
+				box-shadow: 0 0.1rem 0.1rem rgba(var(--third), 0.2);
 				transition: all $base-duration;
 				display: none;
 				opacity: 0;
@@ -133,7 +138,7 @@
 			.sub-menu {
 				padding: 0 0 0.5rem;
 				display: none;
-				//background-color: lighten($primary, 3%);
+				//background-color: lighten(var(--primary), 3%);
 
 				li {
 
@@ -144,7 +149,7 @@
 					}
 				}
 
-				@include grid-media($Small) {
+				@include bp.media-up('Small') {
 					padding: 0.5rem 0;
 
 					li {
@@ -164,17 +169,17 @@
 					display: block;
 					line-height: 1rem;
 					padding: 0.5rem 0 0.5rem;
-					color: $primary;
+					color: var(--primary);
 					font: {
-						family: $heading-font;
-						size: $font-size-large;
+						family: var(--heading-font);
+						size: var(--font-size-large);
 					};
 					transition: 0.3s ease-in-out;
 
 					// .no-touch &:hover,
 					// &:hover {
 					//     //color: #FFF;
-					//     //background-color: lighten($primary, 5%);
+					//     //background-color: lighten(var(--primary), 5%);
 					//     //padding-left: 0.5rem;
 					// }
 
@@ -188,11 +193,11 @@
 							li {
 
 								a {
-									font-size: $font-size-large - 0.2;
+									font-size: var(--font-size-large) - 0.2;
 								}
 
 								// a.active {
-								//     //color: $fourth;
+								//     //color: var(--fourth);
 								// }
 							}
 						}
@@ -203,7 +208,7 @@
 
 
 				//     a {
-				//     	//color: $fourth;
+				//     	//color: var(--fourth);
 				//     }
 				// }
 			}
@@ -218,7 +223,7 @@
 				a {
 					height: 100%;
 					font: {
-						family: $heading-font;
+						family: var(--heading-font);
 						size: calc(1rem + 0.6vmin);
 					};
 					color: $navLinkColor;
@@ -244,7 +249,7 @@
 
 						#navCrossVert {
 							fill: none;
-							stroke: $secondary;
+							stroke: var(--secondary);
 							stroke-width: 0.2rem;
 							transform-origin: 50% 50%;
 							transition: transform .2s;
@@ -252,7 +257,7 @@
 
 						#navCrossHorz {
 							fill: none;
-							stroke: $secondary;
+							stroke: var(--secondary);
 							stroke-width: 0.2rem;
 							transform-origin: 50% 50%;
 							transition: transform .2s;
@@ -266,7 +271,7 @@
 					top: calc(#{$headerHeightDesktop} / 2);
 					margin-left: calc((-#{$marginVert}) / 3);
 					background-color: $navBackground;
-					box-shadow: 0 0.1rem 0.1rem rgba($third, 0.2);
+					box-shadow: 0 0.1rem 0.1rem rgba(var(--third), 0.2);
 					transition: all $base-duration;
 					display: none;
 					opacity: 0;
@@ -355,7 +360,7 @@
 		&-line {
 			width: 50%;
 			height: $border_normal;
-			background-color: $secondary;
+			background-color: var(--secondary);
 			position: absolute;
 			// transition: transform 0.3s;
 
@@ -401,8 +406,8 @@
 		top: 0;
 		right: 0;
 		padding: $headerHeightMobile $paddingMobile * 2;
-		background-color: $fourth;
-		border-left: $border_heavy solid $secondary;
+		background-color: var(--fourth);
+		border-left: $border_heavy solid var(--secondary);
 		z-index: 9995;
 		transform: translateX(100%);
 
@@ -414,7 +419,7 @@
 			top: 0;
 			right: 0;
 			position: fixed;
-			background-color: rgba($secondary, 0.5);
+			background-color: rgba(var(--secondary), 0.5);
 			transform-origin: 100% 0;
 			z-index: 9994;
 		}
@@ -425,48 +430,40 @@
 				margin: 1rem 0;
 
 				a {
-					font-family: $heading-font;
+					font-family: var(--heading-font);
 					text-transform: uppercase;
 				}
 
 				&.active {
 
 					a {
-						color: $secondary;
+						color: var(--secondary);
 					}
 				}
 			}
 		}
 	}
 
-	@include grid-media($XXLarge) {
+	// @include grid-media($XXLarge) {
 
-		&-mobile {
-			display: none;
-			visibility: hidden;
-		}
+	// 	&-mobile {
+	// 		display: none;
+	// 		visibility: hidden;
+	// 	}
 
-		&-main {
+	// 	&-main {
 
-			li {
+	// 		li {
 
 
-				a {
-					font-size: $font-size-base;
-				}
-			}
-		}
-	}
+	// 			a {
+	// 				font-size: var(--font-size-base);
+	// 			}
+	// 		}
+	// 	}
+	// }
 
-	@include grid-media($XLarge) {
-
-		&-mobile {
-			display: none;
-			visibility: hidden;
-		}
-	}
-
-	@include grid-media($Large) {
+	@include bp.media-up('XLarge') {
 
 		&-mobile {
 			display: none;
@@ -474,7 +471,15 @@
 		}
 	}
 
-	@include grid-media($Medium) {
+	@include bp.media-up('Large') {
+
+		&-mobile {
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+	@include bp.media-up('Medium') {
 
 		&-mobile {
 			display: none;
@@ -487,13 +492,13 @@
 				padding: 0.5rem 0.3rem 0;
 
 				a {
-					font-size: $font-size-base - 0.08;
+					font-size: var(--font-size-base) - 0.08;
 				}
 			}
 		}
 	}
 
-	@include grid-media($XSmall) {
+	@include bp.media-up('XSmall') {
 
 		&-mobile {
 			width: calc(50% - (#{$paddingMobile} * 4));
@@ -512,7 +517,7 @@
 		}
 	}
 
-	@include grid-media($Small) {
+	@include bp.media-up('Small') {
 
 		&-mobile {
 			width: calc(80% - (#{$paddingMobile} * 4));

@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 // @import url("../assets/components/tickets/css/web/lib/jquery.jgrowl.min.css");
 
 /* Lists */
@@ -8,7 +13,7 @@
 /* Ticket form */
 #ticketForm {max-width: 800px;}
 #ticketForm #ticket-sections {max-width: 400px;}
-#ticketForm .error, #comment-form .error {color: brown; font-size: $font-size-small; position: relative; top: -1rem;}
+#ticketForm .error, #comment-form .error {color: brown; font-size: var(--font-size-small); position: relative; top: -1rem;}
 #ticketForm [name="content"] {display:inline-block;}
 #ticket-preview-placeholder {background: #fff; outline: 5px solid #AAA; padding: 5px; display: none; margin: 10px 0; overflow: hidden;}
 #ticketForm .form-actions,
