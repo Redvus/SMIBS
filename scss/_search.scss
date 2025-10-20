@@ -1,10 +1,15 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /*=============================================
 =                   Search                   =
 =============================================*/
 
 .post-preview {
 	margin-bottom: $marginVert;
-	border-bottom: $border_thin solid $secondary;
+	border-bottom: $border_thin solid var(--secondary);
 
 	&__top {
 
@@ -27,9 +32,9 @@
 
 	&__date {
 		display: inline-block;
-		background-color: $secondary;
-		color: $fourth;
-		font-size: $font-size-small;
+		background-color: var(--secondary);
+		color: var(--fourth);
+		font-size: var(--font-size-small);
 		padding: calc(#{$marginVert} / 5) calc(#{$marginVert} / 2);
 		// margin-right: $marginVert / 2;
 	}
@@ -37,9 +42,9 @@
 	&__link {
 		height: 100%;
 		display: inline-block;
-		background-color: $primary;
-		// color: $fourth;
-		font-size: $font-size-small;
+		background-color: var(--primary);
+		// color: var(--fourth);
+		font-size: var(--font-size-small);
 		padding: calc(#{$marginVert} / 5) calc(#{$marginVert} / 2);
 		// margin-right: $marginVert / 2;
 

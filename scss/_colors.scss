@@ -28,6 +28,8 @@ $colors: (
         --#{$name}-lighten-15: #{color.adjust($color, $lightness: 15%)};
         --#{$name}-lighten-20: #{color.adjust($color, $lightness: 20%)};
         --#{$name}-lighten-30: #{color.adjust($color, $lightness: 30%)};
+        --#{$name}-lighten-50: #{color.adjust($color, $lightness: 50%)};
+        --#{$name}-lighten-60: #{color.adjust($color, $lightness: 60%)};
         --#{$name}-lighten-70: #{color.adjust($color, $lightness: 70%)};
         --#{$name}-lighten-85: #{color.adjust($color, $lightness: 85%)};
     }

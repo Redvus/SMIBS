@@ -8,9 +8,9 @@
 @use "colors";
 @use "fonts";
 @use "all_variables";
-//@use "../../toWeb/fontawesome-free-6.1.0-web/scss/fontawesome.scss";
-//@use "../../toWeb/fontawesome-free-6.1.0-web/scss/brands.scss";
-//@use "../../toWeb/fontawesome-free-6.1.0-web/scss/solid.scss";
+@use "../fonts//fontawesome-free-7.0.0-web/scss/fontawesome.scss";
+@use "../fonts//fontawesome-free-7.0.0-web/scss/brands.scss";
+@use "../fonts//fontawesome-free-7.0.0-web/scss/solid.scss";
 
 // @use "animate";
 // @use "preloader";
@@ -32,17 +32,17 @@
 // @use "nav_mobile";
 // @use "masterslider";
 
-//@use "photoswipe";
-//@use "tiny-slider";
-//@use "bxslider";
+@use "photoswipe";
+@use "tiny-slider";
+@use "bxslider";
 //
 @use "page";
-//@use "calendar";
-//@use "read";
-//@use "news";
-//@use "search";
+@use "calendar";
+@use "read";
+@use "news";
+@use "search";
 //
-//@use "form";
-//@use "magnific";
-//@use "login-reception";
-//@use "permission";
+@use "form";
+@use "magnific";
+@use "login-reception";
+@use "permission";

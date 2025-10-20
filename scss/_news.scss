@@ -1,3 +1,7 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
 
 /*============================
 =            News            =
@@ -28,10 +32,10 @@
 		display: flex;
 		align-items: center;
 		padding: 0 1rem;
-		background-color: $primary;
+		background-color: var(--primary);
 
 		h4 {
-			font-size: $font-size-base;
+			font-size: var(--font-size-base);
 			padding-bottom: 0.3rem;
 		}
 	}
@@ -42,7 +46,7 @@
 		display: block;
 		float: left;
 		padding: 1rem;
-		font-size: $font-size-small;
+		font-size: var(--font-size-small);
 	}
 
 	&__footer {
@@ -53,9 +57,9 @@
 		width: calc((100% - #{$newsLinkWidth}) - 2rem);
 		padding: 0.5rem 1rem;
 		float: left;
-		background-color: $primary;
-		font-size: $font-size-small;
-		color: $secondary;
+		background-color: var(--primary);
+		font-size: var(--font-size-small);
+		color: var(--secondary);
 	}
 
 	&__link {
@@ -87,31 +91,31 @@
 		// }
 	}
 
-	@include grid-media($XXLarge) {
+	// @include bp.media-up($XXLarge) {
+
+	// 	&__text {
+	// 		height: calc(6vw - 2rem);
+	// 		font-size: $font-size-large;
+	// 	}
+	// }
+
+	@include bp.media-up('XLarge') {
 
 		&__text {
 			height: calc(6vw - 2rem);
-			font-size: $font-size-large;
+			font-size: var(--font-size-base);
 		}
 	}
 
-	@include grid-media($XLarge) {
+	@include bp.media-up('Large') {
 
 		&__text {
 			height: calc(6vw - 2rem);
-			font-size: $font-size-base;
+			font-size: var(--font-size-small);
 		}
 	}
 
-	@include grid-media($Large) {
-
-		&__text {
-			height: calc(6vw - 2rem);
-			font-size: $font-size-small;
-		}
-	}
-
-	@include grid-media($Medium) {
+	@include bp.media-up('Medium') {
 
 		&__title {
 			padding: 1rem;
@@ -119,11 +123,11 @@
 
 		&__text {
 			height: calc(9vw - 2rem);
-			font-size: $font-size-small;
+			font-size: var(--font-size-small);
 		}
 	}
 
-	@include grid-media($XSmall) {
+	@include bp.media-up('XSmall') {
 
 		&__image {
 			height: inherit;
@@ -140,7 +144,7 @@
 		}
 	}
 
-	@include grid-media($Small) {
+	@include bp.media-up('Small') {
 
 		&__image {
 			height: calc(70vw - (#{$paddingMobile} * 2));
@@ -177,16 +181,16 @@
 		color: $gridderSVGColor;
 		// top: $marginVert;
 		// right: 0;
-		// background-color: $secondary;
-		// color: $primary;
-		font-size: $font-size-small;
+		// background-color: var(--secondary);
+		// color: var(--primary);
+		font-size: var(--font-size-small);
 		padding: 0 calc(#{$marginVert} / 2);
 	}
 
 	&__title {
 		width: 100%;
 		display: block;
-		// border-bottom: $border_thin solid $secondary;
+		// border-bottom: $border_thin solid var(--secondary);
 
 		// h3 {
 		// 	margin-top: 0;
@@ -412,14 +416,14 @@
 		}
 	}
 
-	@include grid-media($Medium) {
+	@include bp.media-up('Medium') {
 
 		&__text {
 			columns: 1;
 		}
 	}
 
-	@include grid-media($XSmall) {
+	@include bp.media-up('XSmall') {
 
 		&__text {
 
@@ -438,7 +442,7 @@
 		}
 	}
 
-	@include grid-media($Small) {
+	@include bp.media-up('Small') {
 
 		&__text {
 
@@ -488,8 +492,8 @@
 		top: 0;
 		left: 0;
 		background-color: $gridderBackground;
-		color: $secondary;
-		font-size: $font-size-small;
+		color: var(--secondary);
+		font-size: var(--font-size-small);
 	}
 
 	&__text {
@@ -508,7 +512,7 @@
 			display: block;
 			// margin: 0 0 0 $marginVert;
 			// padding-right: $marginVert;
-			// border-right: $border_normal solid $secondary;
+			// border-right: $border_normal solid var(--secondary);
 
 			&:first-child {
 				margin-left: 0;
@@ -548,10 +552,10 @@
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background-color: lighten($secondary, 60%);
+	background-color: var(--lighten-secondary-60);
 	z-index: 1;
 	box-sizing: border-box;
-	transition: transform 0.3s $ease-in-out-quad;
+	transition: transform 0.3s;
 	transition-delay: 0.05s;
 }
 
@@ -588,7 +592,7 @@
 		// flex-direction: column;
 		// justify-content: center;
 		position: relative;
-		transition: 0.5s $ease-out-expo;
+		transition: 0.5s;
 		cursor: pointer;
 		// cursor: url('images/linkExpand.png') 18 18, pointer;
 
@@ -605,7 +609,7 @@
 			position: relative;
 			padding: 0 1rem;
 			box-sizing: border-box;
-			transition: transform 0.4s $ease-out-expo;
+			transition: transform 0.4s;
 			transition-delay: 0.25s;
 			z-index: 10;
 
@@ -618,7 +622,7 @@
 				// padding: 0 2rem;
 				visibility: hidden;
 				// z-index: 10;
-				transition: transform 0.4s $ease-out-expo;
+				transition: transform 0.4s;
 				transition-delay: 0.3s;
 				transform: translateY(100%);
 			}
@@ -632,7 +636,7 @@
 				// padding: 0 2rem;
 				visibility: hidden;
 				// z-index: 10;
-				transition: transform 0.4s $ease-out-expo;
+				transition: transform 0.4s;
 				transition-delay: 0.3s;
 				transform: translateY(100%);
 			}
@@ -764,11 +768,11 @@
 		}
 
 		.gridder-nav.background--dark {
-			border-color: $primary;
+			border-color: var(--primary);
 		}
 
 		.gridder-nav.background--complex {
-			border-color: lighten($primary, 50%);
+			border-color: var(--lighten-primary-50);
 		}
 
 		.gridder-close {
@@ -831,19 +835,19 @@
 		// display: flex;
 		// flex-direction: row;
 		padding: $marginVert 0 calc(#{$marginVert} / 2);
-		border-top: $border_normal solid $secondary;
-		border-bottom: $border_normal solid $secondary;
+		border-top: $border_normal solid var(--secondary);
+		border-bottom: $border_normal solid var(--secondary);
 		overflow: auto;
 	}
 
-	// @include grid-media($XLarge) {
+	// @include bp.media-up($XLarge) {
 
 	// 	&-show {
 	// 		width: calc((100% / 4) * 3);
 	// 	}
 	// }
 
-	@include grid-media($Small) {
+	@include bp.media-up('Small') {
 
 		&-navigation {
 			width: calc((100% / 3) * 1);

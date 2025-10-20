@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /** VARIABLES
 ===================================*/
 /** RESET AND LAYOUT
@@ -184,7 +189,7 @@ ul.bxslider {
   // background: url('images/controls.png') no-repeat 0 -32px;
   background: url('images/bx_next.svg') no-repeat 50% 50%;
   background-size: 60% 60%;
-  background-color: $secondary;
+  background-color: var(--secondary);
   opacity: 0;
   // transform: translateX(-50%);
 }
@@ -197,7 +202,7 @@ ul.bxslider {
   // background: url('images/controls.png') no-repeat -43px -32px;
   background: url('images/bx_prev.svg') no-repeat 50% 50%;
   background-size: 60% 60%;
-  background-color: $secondary;
+  background-color: var(--secondary);
   opacity: 0;
   // transform: translateX(50%);
 }

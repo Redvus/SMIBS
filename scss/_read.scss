@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /*==================================================
 =                   Read Content                   =
 ==================================================*/
@@ -82,19 +87,19 @@
 			flex-direction: column;
 			// align-items: center;
 			justify-content: center;
-			font-size: $font-size-base;
+			font-size: var(--font-size-base);
 			font-weight: bold;
 			color: $layoutBackground;
 			padding: calc(#{$marginVert} / 2);
-			background-color: $secondary;
+			background-color: var(--secondary);
 		}
 
 		&__info {
 			width: calc(70% - #{$marginVert});
 			display: block;
-			font-size: $font-size-small;
-			color: $secondary;
-			background-color: $primary;
+			font-size: var(--font-size-small);
+			color: var(--secondary);
+			background-color: var(--primary);
 			padding: calc(#{$marginVert} / 2);
 		}
 	}
@@ -105,16 +110,16 @@
 		float: left;
 		padding: calc(#{$marginVert} / 3) calc(#{$marginVert} / 2);
 		margin-right: calc(#{$marginVert} / 2);
-		background-color: $primary;
+		background-color: var(--primary);
 		text-align: center;
-		border: $border_thin solid $secondary;
+		border: $border_thin solid var(--secondary);
 		border-radius: calc(#{$border_normal} * 2);
 		transition: all $base-duration;
 
 		&:hover {
 			// background-color: $layoutBackground;
-			// color: $primary;
-			box-shadow: $border_normal $border_normal $border_normal $secondary;
+			// color: var(--primary);
+			box-shadow: $border_normal $border_normal $border_normal var(--secondary);
 		}
 	}
 
@@ -135,7 +140,30 @@
 		}
 	}
 
-	@include grid-media($XXLarge) {
+	// @include bp.media-up($XXLarge) {
+
+	// 	&__image {
+	// 		width: 25%;
+	// 	}
+
+	// 	&__content {
+	// 		width: calc(75% - #{$marginVert});
+	// 	}
+
+	// 	&__introtext {
+	// 		font-size: var(--font-size-base);
+	// 	}
+
+	// 	// &__link {
+
+	// 	// 	&--mobile {
+	// 	// 		display: none;
+	// 	// 		visibility: hidden;
+	// 	// 	}
+	// 	// }
+	// }
+
+	@include bp.media-up('XLarge') {
 
 		&__image {
 			width: 25%;
@@ -143,10 +171,6 @@
 
 		&__content {
 			width: calc(75% - #{$marginVert});
-		}
-
-		&__introtext {
-			font-size: $font-size-base;
 		}
 
 		// &__link {
@@ -158,26 +182,7 @@
 		// }
 	}
 
-	@include grid-media($XLarge) {
-
-		&__image {
-			width: 25%;
-		}
-
-		&__content {
-			width: calc(75% - #{$marginVert});
-		}
-
-		// &__link {
-
-		// 	&--mobile {
-		// 		display: none;
-		// 		visibility: hidden;
-		// 	}
-		// }
-	}
-
-	@include grid-media($Large) {
+	@include bp.media-up('Large') {
 
 		&__image {
 			width: 30%;
@@ -196,7 +201,7 @@
 		// }
 	}
 
-	@include grid-media($XSmall) {
+	@include bp.media-up('XSmall') {
 
 		&__image {
 			width: 100%;
@@ -214,7 +219,7 @@
 				margin-bottom: calc(#{$marginVert} / 2);
 
 				&:hover {
-					background-color: $primary !important;
+					background-color: var(--primary) !important;
 					box-shadow: none !important;
 				}
 			}

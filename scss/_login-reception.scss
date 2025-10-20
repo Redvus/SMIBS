@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /*=============================================
 =                   Login                   =
 =============================================*/
@@ -40,7 +45,7 @@
 				margin-right: calc(#{$marginVert} / 2);
 
 				a {
-					font-size: $font-size-small;
+					font-size: var(--font-size-small);
 					color: $sidebarButtonsBackground;
 				}
 
@@ -64,7 +69,7 @@
 				&:hover {
 
 					a, i {
-						color: $secondary;
+						color: var(--secondary);
 					}
 				}
 			}
@@ -79,9 +84,9 @@
 			padding-right: calc(#{$marginVert} / 2);
 
 			& > span {
-				font-size: $font-size-large;
-				font-family: $heading-font;
-				color: $secondary;
+				font-size: var(--font-size-large);
+				font-family: var(--heading-font);
+				color: var(--secondary);
 			}
 		}
 
@@ -96,7 +101,7 @@
 				width: calc(25rem - ((#{$marginVert} * 3) * 2) - ((#{$marginVert} / 4) * 3) - (#{$border_thin} * 2));
 				height: calc(#{$marginVert} - #{$border_thin});
 				display: inline-block;
-				border: $border_thin solid $secondary;
+				border: $border_thin solid var(--secondary);
 				border-bottom: none;
 				padding: 0 calc(#{$marginVert} / 4);
 				margin-right: calc(#{$marginVert} / 4);
@@ -107,7 +112,7 @@
 				&:focus,
 				&:visited {
 					color: $formInputColor;
-					background-color: $fourth;
+					background-color: var(--fourth);
 					border-color: $formInputColor;
 				}
 
@@ -156,28 +161,28 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background-color: $secondary;
+			background-color: var(--secondary);
 
 			a {
-				color: $primary;
+				color: var(--primary);
 			}
 
 			&:hover {
 
 				a {
-					color: $fourth;
+					color: var(--fourth);
 				}
 			}
 
 			&--enter {
 				outline: none;
 				border: none;
-				color: $primary;
-				font-size: $font-size-base;
+				color: var(--primary);
+				font-size: var(--font-size-base);
 				cursor: pointer;
 
 				&:hover {
-					color: $fourth;
+					color: var(--fourth);
 				}
 			}
 
@@ -187,7 +192,7 @@
 			}
 		}
 
-		@include grid-media($Small) {
+		@include bp.media-up('Small') {
 			width: 100%;
 			height: inherit;
 			min-height: $marginVert;
@@ -220,7 +225,7 @@
 
 				&-input {
 					width: calc(100% - ((#{$marginVert} / 4) * 2) - (#{$border_thin} * 2));
-					border-bottom: $border_thin solid $secondary;
+					border-bottom: $border_thin solid var(--secondary);
 					margin-right: 0;
 					margin-bottom: calc(#{$marginVert} / 4);
 				}
@@ -245,7 +250,7 @@
 		position: relative;
 		padding: $marginVert;
 		margin-bottom: $marginVert;
-		background-color: lighten($layoutBackground, 5%);
+		background-color: var(--lighten-third-5);
 
 		&--half {
 			width: calc(50% - (#{$marginVert} * 2));
@@ -270,9 +275,9 @@
 
 			li {
 				list-style: none;
-				font-family: $heading-font-light;
-				font-size: $font-size-h4;
-				color: $secondary;
+				font-family: var(--heading-font)-light;
+				font-size: var(--font-size-h4);
+				color: var(--secondary);
 			}
 
 			span {
@@ -280,7 +285,7 @@
 			}
 
 			p {
-				color: $secondary;
+				color: var(--secondary);
 
 				a {
 					color: $sidebarButtonsBackground;
@@ -288,7 +293,7 @@
 			}
 		}
 
-		@include grid-media($Small) {
+		@include bp.media-up('Small') {
 			width: calc(100% - (#{$marginVert} * 1));
 			padding: calc(#{$marginVert} / 2);
 			flex-direction: column;

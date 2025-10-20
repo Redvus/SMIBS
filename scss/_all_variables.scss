@@ -50,7 +50,7 @@ $footerDownBlock : var(--primary-lighten-10);
 
 /*----------  Layout  ----------*/
 // $layoutBackground : lighten($primary, 13%);
-$layoutBackground : var(--fourth);
+$layoutBackground : var(--third);
 $backgroundLineColor : var(--primary-lighten-85);
 $wrapperContentInsideWidth: calc(100% - ((#{$headerHeightDesktop} + 3rem) * 2));
 

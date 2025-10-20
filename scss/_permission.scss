@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /*======================================
 =            Permission 18+            =
 ======================================*/
@@ -14,21 +19,21 @@
 		padding: 1rem calc(#{$headerBlindWidth} * 2) 1rem calc(#{$headerBlindWidth} / 2);
 		right: 0;
 		bottom: 0;
-		background-color: $fourth;
-		box-shadow: 0 -0.1rem 0.1rem rgba($third, 0.2);
+		background-color: var(--fourth);
+		box-shadow: 0 -0.1rem 0.1rem rgba(var(--third), 0.2);
 		z-index: 99999;
 
 		&__text {
 
 			p {
-				font-size: $font-size-small;
+				font-size: var(--font-size-small);
 			}
 
 			a {
 				font-weight: 600;
 
 				&:hover {
-					color: lighten($primary, 10%);
+					color: var(--lighten-primary-10);
 				}
 			}
 		}
@@ -42,13 +47,13 @@
 			position: absolute;
 			top: 2rem;
 			right: calc(#{$headerBlindWidth} / 2);
-			background-color: $secondary;
-			color: $fourth;
+			background-color: var(--secondary);
+			color: var(--fourth);
 			cursor: pointer;
 			transition: background 0.3s;
 
 			&:hover {
-				background-color: darken($secondary, 5%);
+				background-color: var(--darken-secondary-5);
 			}
 		}
 	}
@@ -63,7 +68,7 @@
 		visibility: hidden;
 	}
 
-	@include grid-media($XSmall) {
+	@include bp.media-up('XSmall') {
 
 		&-cookie {
 			width: calc(100% - 2rem);

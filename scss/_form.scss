@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /*===================================
 =            Contact Form            =
 ===================================*/
@@ -17,7 +22,7 @@
 			justify-content: center;
 			align-items: center;
 			position: absolute;
-			background-color: $secondary;
+			background-color: var(--secondary);
 			// margin-top: 0.15rem;
 			// border-top-left-radius: $inputHeight / 2;
 			// border-bottom-left-radius: $inputHeight / 2;
@@ -25,9 +30,9 @@
 
 			&:before {
 				font-family: 'fontawesome';
-				font-size: $font-size-small;
+				font-size: var(--font-size-small);
 				font-weight: normal;
-				color: $fourth;
+				color: var(--fourth);
 				position: relative;
 			}
 
@@ -68,7 +73,7 @@
 		&-description {
 			float: left;
 			margin-top: -0.2rem;
-			color: rgba($secondary, 0.7);
+			color: rgba(var(--secondary), 0.7);
 		}
 
 		&-file {
@@ -93,15 +98,15 @@
 		width: 100%;
 
 		span {
-			font-size: $font-size-small;
+			font-size: var(--font-size-small);
 		}
 	}
 
 	%input {
 		outline: none;
 		margin-bottom: 1rem;
-		font-family: $primary-font;
-		font-size: $font-size-base;
+		font-family: var(--primary-font);
+		font-size: var(--font-size-base);
 		// text-align: center;
 		border: $border_thin solid $formInputColor;
 		// border-top-left-radius: $inputHeight / 2;
@@ -115,7 +120,7 @@
 		&:focus,
 		&:visited {
 			color: $formInputColor;
-			background-color: $fourth;
+			background-color: var(--fourth);
 			border-color: $formInputColor;
 		}
 
@@ -231,8 +236,8 @@
 			border: $border_thin solid $formInputColor;
 			text-align: center;
 			color: $formInputColor;
-			font-size: $font-size-base;
-			line-height: $font-size-base;
+			font-size: var(--font-size-base);
+			line-height: var(--font-size-base);
 			text-transform: uppercase;
 			text-decoration: none;
 			// border-top-left-radius: $inputHeight / 2;
@@ -247,8 +252,8 @@
 			// 	content:"\f003";
 			// 	font-family: 'fontawesome';
 			// 	color: $formInputColor;
-			// 	font-size: $font-size-base;
-			// 	line-height: $font-size-base;
+			// 	font-size: var(--font-size-base);
+			// 	line-height: var(--font-size-base);
 			// 	margin-right: $marginVert / 4;
 			// 	opacity: 0;
 			// 	// position: absolute;
@@ -271,7 +276,7 @@
 				opacity: 0.5;
 
 				&:hover {
-					background: $primary;
+					background: var(--primary);
 				}
 			}
 
@@ -363,9 +368,9 @@
 			margin-top: -1rem;
 			margin-bottom: 1rem;
 			padding: 0.5rem 1rem;
-			color: $fourth;
+			color: var(--fourth);
 			// font-size: 0;
-			font-size: $font-size-small;
+			font-size: var(--font-size-small);
 			background-color: #d9534f;
 		}
 
@@ -408,7 +413,7 @@
 		display: flex;
 		// justify-content: center;
 		align-items: center;
-		font-size: $font-size-small;
+		font-size: var(--font-size-small);
 		margin-bottom: 0.5rem;
 
 		p {
@@ -421,7 +426,7 @@
 		}
 	}
 
-	@include grid-media($Small) {
+	@include bp.media-up('Small') {
 
 		&__button {
 

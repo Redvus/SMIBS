@@ -1,3 +1,8 @@
+@use "fonts" as *;
+@use "sass:color";
+@use 'breakpoints' as bp;
+@use 'all_variables' as *;
+
 /*===================================================
 =                   Calendar Page                   =
 ===================================================*/
@@ -10,7 +15,7 @@
 		height: 100%;
 		display: block;
 		float: left;
-		border-right: $border_thin solid $secondary;
+		border-right: $border_thin solid var(--secondary);
 
 		&-num {
 			width: 100%;
@@ -18,12 +23,12 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			// border-bottom: $border_thin solid $secondary;
-			background-color: $secondary;
+			// border-bottom: $border_thin solid var(--secondary);
+			background-color: var(--secondary);
 
 			span {
-				font-family: $heading-font;
-				font-size: $font-size-large + 0.5;
+				font-family: var(--heading-font);
+				font-size: var(--font-size-large) + 0.5;
 				color: $layoutBackground;
 			}
 		}
@@ -34,13 +39,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			// border-bottom: $border_thin solid $secondary;
+			// border-bottom: $border_thin solid var(--secondary);
 			// padding-left: 0.5rem;
-			background-color: $primary;
+			background-color: var(--primary);
 
 			span {
-				font-size: $font-size-base;
-				color: $secondary;
+				font-size: var(--font-size-base);
+				color: var(--secondary);
 			}
 		}
 
@@ -54,17 +59,17 @@
 			background-color: $navBackground;
 
 			span {
-				font-size: $font-size-base;
-				color: $secondary;
+				font-size: var(--font-size-base);
+				color: var(--secondary);
 			}
 		}
 
 		&--current {
-			background-color: $secondary;
-			border-color: $primary;
+			background-color: var(--secondary);
+			border-color: var(--primary);
 
 			span {
-				color: $primary;
+				color: var(--primary);
 			}
 		}
 
@@ -76,13 +81,13 @@
 			}
 		}
 
-		@include grid-media($Small) {
+		@include bp.media-up('Small') {
 
 			&-month,
 			&-week {
 
 				span {
-					font-size: $font-size-small;
+					font-size: var(--font-size-small);
 				}
 			}
 		}
@@ -95,38 +100,38 @@
 		float: left;
 
 		&--current {
-			background-color: $primary;
-			border-color: $secondary;
+			background-color: var(--primary);
+			border-color: var(--secondary);
 		}
 	}
 
-	@include grid-media($XXLarge) {
+	// @include bp.media-up('XXLarge') {
 
-		&__data {
-			width: calc(5rem - #{$border_thin});
+	// 	&__data {
+	// 		width: calc(5rem - #{$border_thin});
 
-			&-num {
+	// 		&-num {
 
-				span {
-					font-size: $font-size-large + 1;
-				}
-			}
+	// 			span {
+	// 				font-size: var(--font-size-large) + 1;
+	// 			}
+	// 		}
 
-			&-month,
-			&-week {
+	// 		&-month,
+	// 		&-week {
 
-				span {
-					font-size: $font-size-large;
-				}
-			}
-		}
+	// 			span {
+	// 				font-size: var(--font-size-large);
+	// 			}
+	// 		}
+	// 	}
 
-		&__events {
-			width: calc(100% - 5rem - #{$border_thin});
-		}
-	}
+	// 	&__events {
+	// 		width: calc(100% - 5rem - #{$border_thin});
+	// 	}
+	// }
 
-	@include grid-media($XLarge) {
+	@include bp.media-up('XLarge') {
 
 		&__data {
 			width: calc(4rem - #{$border_thin});
@@ -134,7 +139,7 @@
 			&-num {
 
 				span {
-					font-size: $font-size-large + 0.5;
+					font-size: var(--font-size-large) + 0.5;
 				}
 			}
 
@@ -142,7 +147,7 @@
 			&-week {
 
 				span {
-					font-size: $font-size-base;
+					font-size: var(--font-size-base);
 				}
 			}
 		}
@@ -152,7 +157,7 @@
 		}
 	}
 
-	@include grid-media($Large) {
+	@include bp.media-up('Large') {
 
 		&__data {
 			width: calc(3rem - #{$border_thin});
@@ -160,7 +165,7 @@
 			&-num {
 
 				span {
-					font-size: $font-size-large + 0.5;
+					font-size: var(--font-size-large) + 0.5;
 				}
 			}
 
@@ -168,7 +173,7 @@
 			&-week {
 
 				span {
-					font-size: $font-size-base;
+					font-size: var(--font-size-base);
 				}
 			}
 		}
