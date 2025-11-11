@@ -5,11 +5,15 @@
 ================================*/
 
 $colors: (
-    primary: #feba8b, // Оранжевый
-    secondary: #830800, // Бордовый
-    third: #000, // Темный var1: #1E252B
+    primary: #feba8b,
+    // Оранжевый
+    secondary: #ee4c30,
+    // #830800
+    third: #000,
+    // Темный var1: #1E252B
     fourth: #fff,
-    five: #7a97ab
+    five: #7a97ab,
+    six: #b60b00,
 );
 
 :root {
@@ -25,6 +29,7 @@ $colors: (
         --#{$name}-lighten-2: #{color.adjust($color, $lightness: 2%)};
         --#{$name}-lighten-5: #{color.adjust($color, $lightness: 5%)};
         --#{$name}-lighten-10: #{color.adjust($color, $lightness: 10%)};
+        --#{$name}-lighten-13: #{color.adjust($color, $lightness: 13%)};
         --#{$name}-lighten-15: #{color.adjust($color, $lightness: 15%)};
         --#{$name}-lighten-20: #{color.adjust($color, $lightness: 20%)};
         --#{$name}-lighten-30: #{color.adjust($color, $lightness: 30%)};
@@ -34,8 +39,8 @@ $colors: (
         --#{$name}-lighten-85: #{color.adjust($color, $lightness: 85%)};
     }
 
-    --layoutBackground : var(--third);
-    --elementBackground : var(--fourth);
+    --layoutBackground: var(--fourth);
+    --elementBackground: var(--fourth);
 
     /*----------  Blind Color  ----------*/
     --blindBackgroundBW: var(--third);
@@ -44,14 +49,14 @@ $colors: (
     --blindBackgroundWB: var(--fourth);
     --blindColorWB: var(--third);
 
-    --blindBackgroundCW: #0099CC;
+    --blindBackgroundCW: #0099cc;
     --blindColorCW: var(--third);
 
-    --blindBackgroundYB: #FFCC33;
+    --blindBackgroundYB: #ffcc33;
     --blindColorYB: var(--third);
 
-    --error : var(--third);
-    --success : var(--fourth);
+    --error: var(--third);
+    --success: var(--fourth);
 }
 
 /*=====  End of Colors  ======*/

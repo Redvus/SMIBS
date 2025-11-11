@@ -1,47 +1,45 @@
-
-;(function() {
-
+(function () {
     function galleryAnniversary() {
         $("#galleryAnniversary").bxSlider({
-            'wrapperClass': 'main-content__anniversary',
-            'mode': 'fade',
+            wrapperClass: "main-content__anniversary",
+            mode: "fade",
             // 'auto': true,
             // 'pause': 8000,
-            'pager': false
+            pager: false,
         });
     }
 
     function introTNS() {
         const slider = tns({
-            container: '#sliderIntro',
-            slideBy: 'page',
+            container: "#sliderIntro",
+            slideBy: "page",
             autoplay: true,
             autoplayTimeout: 8000,
             touch: true,
             mouseDrag: true,
-            controlsText: ['',''],
-            autoplayButton: false
+            controlsText: ["", ""],
+            autoplayButton: false,
         });
     }
 
     function introTNSMobile() {
         const slider = tns({
-            container: '#sliderIntro',
-            slideBy: 'page',
+            container: "#sliderIntro",
+            slideBy: "page",
             autoplay: true,
             autoplayTimeout: 8000,
             touch: true,
-            controlsText: ['',''],
+            controlsText: ["", ""],
             autoplayButton: false,
-            nav: false
+            nav: false,
         });
     }
 
     /*============  End of Sliders  =============*/
 
     function initPage() {
-        // galleryAnniversary(); // Worker
-        // introTNS(); // Worked
+        galleryAnniversary(); // Worker
+        introTNS(); // Worked
     }
 
     function initPageMobile() {
@@ -53,5 +51,4 @@
     } else {
         initPageMobile();
     }
-
-}(jQuery));
+})(jQuery);
