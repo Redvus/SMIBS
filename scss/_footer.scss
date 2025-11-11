@@ -1,12 +1,15 @@
 @use "fonts" as *;
 @use "sass:color";
-@use 'breakpoints' as bp;
-@use 'all_variables' as *;
+@use "breakpoints" as bp;
+@use "all_variables" as *;
 
 /*==============================
 =            Footer            =
 ==============================*/
-$footer-grid: (columns: 1, gutter: 5rem);
+$footer-grid: (
+    columns: 1,
+    gutter: 5rem,
+);
 
 .footer {
     width: 100%;
@@ -52,8 +55,6 @@ $footer-grid: (columns: 1, gutter: 5rem);
     }
 
     &__logo {
-
-
         a {
             width: calc(100% - 4rem);
             height: 100%;
@@ -104,7 +105,6 @@ $footer-grid: (columns: 1, gutter: 5rem);
     // }
 
     &__social {
-
         ul {
             width: 100%;
             //height: 100%;
@@ -133,9 +133,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
                 }
 
                 &:hover {
-
                     svg {
-
                         path {
                             fill: var(--fourth);
                         }
@@ -154,7 +152,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         // bottom: 0;
         // border-top: 1px solid #fff;
         background-color: $footerDownBlock;
-        font-size: var(--font-size-small) - 0.2;
+        font-size: var(--font-size-small);
 
         p {
             margin: 0;
@@ -216,7 +214,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         // left: 0;
         z-index: -1;
 
-        >span {
+        > span {
             width: $footerPartWidth;
             height: 100%;
             position: relative;
@@ -246,10 +244,8 @@ $footer-grid: (columns: 1, gutter: 5rem);
     //     }
     // }
 
-    @include bp.media-up('XLarge') {
-
+    @include bp.media-up("XLarge") {
         &__adress {
-
             &--desktop {
                 display: block;
                 visibility: visible;
@@ -262,10 +258,8 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
     }
 
-    @include bp.media-up('Large') {
-
+    @include bp.media-up("Large") {
         &__adress {
-
             &--desktop {
                 display: block;
                 visibility: visible;
@@ -278,10 +272,8 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
     }
 
-    @include bp.media-up('Medium') {
-
+    @include bp.media-up("Medium") {
         &__adress {
-
             &--desktop {
                 display: block;
                 visibility: visible;
@@ -294,7 +286,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
     }
 
-    @include bp.media-up('XSmall') {
+    @include bp.media-up("XSmall") {
         height: inherit;
         z-index: 1;
 
@@ -325,13 +317,12 @@ $footer-grid: (columns: 1, gutter: 5rem);
             display: none;
             visibility: hidden;
 
-            >span {
+            > span {
                 width: $headerPartWidthMobile;
             }
         }
 
         &__adress {
-
             &--desktop {
                 display: none;
                 visibility: hidden;
@@ -375,7 +366,7 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
     }
 
-    @include bp.media-up('Small') {
+    @include bp.media-up("Small") {
         height: inherit;
         z-index: 1;
 
@@ -406,13 +397,12 @@ $footer-grid: (columns: 1, gutter: 5rem);
             display: none;
             visibility: hidden;
 
-            >span {
+            > span {
                 width: $headerPartWidthMobile;
             }
         }
 
         &__adress {
-
             &--desktop {
                 display: none;
                 visibility: hidden;
@@ -505,7 +495,6 @@ $footer-grid: (columns: 1, gutter: 5rem);
         }
 
         &:hover {
-
             i {
                 color: var(--fourth);
             }
