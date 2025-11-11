@@ -40,7 +40,7 @@
         text-align: center;
 
         i {
-            font-size: var(--font-size-large) + 1.5;
+            font-size: calc(var(--font-size-large) * 2);
             color: var(--fourth);
             margin-top: 0.2rem;
         }
