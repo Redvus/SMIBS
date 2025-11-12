@@ -74,7 +74,7 @@
 
         p {
             font-size: var(--font-size-small);
-            color: var(--secondary);
+            // color: var(--secondary);
         }
     }
 
@@ -311,7 +311,7 @@
             // background-color: var(--primary);
             text-align: center;
             font-size: var(--font-size-small);
-            color: var(--secondary);
+            color: var(--body-font-color);
             margin-bottom: calc(#{$marginVert} / 2);
             padding: calc(#{$marginVert} / 5) calc(#{$marginVert} / 3);
             border: $border_thin solid var(--secondary);

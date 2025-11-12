@@ -60,7 +60,8 @@ $font-width-extended: 125%;
     --heading-font: "Oswald", sans-serif;
     --heading-font-light: "Oswald", sans-serif;
 
-    --body-font-color: var(--secondary-lighten-5);
+    // --body-font-color: var(--secondary-lighten-5);
+    --body-font-color: var(--seven);
     // --heading-font-color: var(--secondary-lighten-30);
     --heading-font-color: var(--secondary);
 
@@ -192,7 +193,7 @@ ul {
 }
 
 a {
-    color: var(--secondary);
+    color: var(--body-font-color);
     text-decoration: none;
     transition: all var(--base-duration);
     outline: none;

@@ -324,9 +324,9 @@ $inputHeight: 2rem;
         font-size: var(--font-size-small);
     }
 
-    strong {
-        color: var(--secondary);
-    }
+    // strong {
+    //     color: var(--secondary);
+    // }
 
     @include bp.media-up("XLarge") {
         font-size: var(--font-size-base);
@@ -463,18 +463,18 @@ ul {
     // }
 }
 
-a {
-    color: var(--secondary);
-    text-decoration: none;
-    transition: all $base-duration;
-    outline: none;
+// a {
+//     color: var(--secondary);
+//     text-decoration: none;
+//     transition: all $base-duration;
+//     outline: none;
 
-    // &:active,
-    // &:focus,
-    // &:hover {
-    //     //color: $action-color;
-    // }
-}
+//     // &:active,
+//     // &:focus,
+//     // &:hover {
+//     //     //color: $action-color;
+//     // }
+// }
 
 button {
     transition: all $base-duration;
