@@ -44,12 +44,12 @@
 
     &__inside {
         // @include grid-column(12, $second-grid);
-        width: calc(100% - #{$headerBlindWidth});
+        width: calc(100% - (#{$marginVert} * 3));
         min-height: 10rem;
         display: block;
         // float: left;
         // margin-left: $headerHeightDesktop + 1;
-        margin: 0 auto $marginVert;
+        margin: 0 0 $marginVert $marginVert;
         position: relative;
         overflow: auto;
 
@@ -585,10 +585,11 @@
         display: block;
         float: left;
         position: relative;
-        // background-color: var(--primary);
+        background-color: var(--primary);
         margin-left: $marginVert;
         // border: $frontAnniversaryBorder solid var(--secondary);
         // overflow: hidden;
+        color: var(--body-font-color-light) !important;
 
         #galleryAnniversary {
             width: 100% !important;
@@ -634,7 +635,8 @@
                 family: var(--heading-font);
                 size: var(--font-size-h1);
             }
-            color: var(--primary);
+            // color: var(--heading-font-color);
+            color: var(--body-font-color-light);
         }
 
         &-month {
@@ -647,7 +649,8 @@
                 family: var(--heading-font);
                 size: var(--font-size-small);
             }
-            color: var(--primary);
+            // color: var(--heading-font-color);
+            color: var(--body-font-color-light);
         }
 
         picture.main-content__anniversary-photo {
@@ -682,7 +685,8 @@
                     size: var(--font-size-h1);
                 }
                 line-height: 1;
-                color: var(--secondary);
+                // color: var(--secondary);
+                color: var(--body-font-color-light);
                 text-align: center;
             }
 
@@ -697,7 +701,8 @@
                     size: var(--font-size-small);
                 }
                 line-height: 1;
-                color: var(--secondary);
+                // color: var(--secondary);
+                color: var(--body-font-color-light);
                 margin: 0;
                 text-align: center;
             }
@@ -1161,6 +1166,7 @@
         // @include grid-container;
         // margin-bottom: $marginVert;
         overflow: hidden;
+        margin-bottom: calc(#{$marginVert} * 1);
 
         &-block {
             // @include grid-column(12, $second-grid);
@@ -1168,14 +1174,28 @@
             min-height: 10rem;
         }
 
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
         &-single {
-            @include rowMachine(4, calc(#{$marginVert} / 2));
+            // @include rowMachine(4, calc(#{$marginVert} / 2));
+            width: calc(
+                (100% / 4) - (#{$marginVert} * 1) - (#{$border_thin} * 2)
+            );
             min-height: 10rem;
-            // border: $border_thin solid var(--secondary);
+            display: flex;
+            flex-direction: column;
+            border: $border_thin solid var(--primary);
             background-color: var(--lighten-primary-10);
             position: relative;
+            margin-right: calc(#{$marginVert} / 2);
             // box-shadow: 0.1rem 0.1rem 0.2rem rgba($third, 0.3);
             // transition: all 0.3s;
+            flex-grow: 1;
 
             // &:hover {
             //     box-shadow: 0.2rem 0.2rem 0.2rem rgba($third, 0.2);
@@ -1186,6 +1206,10 @@
                 display: table;
                 clear: both;
             }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
         }
 
         // @include bp.media-up($XXLarge) {
@@ -1195,17 +1219,17 @@
         // 	}
         // }
 
-        @include bp.media-up("XLarge") {
-            &-single {
-                @include rowMachine(4, $marginVert);
-            }
-        }
+        // @include bp.media-up("XLarge") {
+        //     &-single {
+        //         @include rowMachine(4, $marginVert);
+        //     }
+        // }
 
-        @include bp.media-up("Large") {
-            &-single {
-                @include rowMachine(4, calc(#{$marginVert} / 2));
-            }
-        }
+        // @include bp.media-up("Large") {
+        //     &-single {
+        //         @include rowMachine(4, calc(#{$marginVert} / 2));
+        //     }
+        // }
 
         @include bp.media-up("Medium") {
             // &-single {

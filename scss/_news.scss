@@ -56,7 +56,8 @@
         width: calc((100% - #{$newsLinkWidth}) - 2rem);
         padding: 0.5rem 1rem;
         float: left;
-        background-color: var(--primary);
+        // background-color: var(--primary);
+        background-color: var(--third-lighten-95);
         font-size: var(--font-size-small);
         color: var(--secondary);
     }

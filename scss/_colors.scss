@@ -38,6 +38,7 @@ $colors: (
         --#{$name}-lighten-60: #{color.adjust($color, $lightness: 60%)};
         --#{$name}-lighten-70: #{color.adjust($color, $lightness: 70%)};
         --#{$name}-lighten-85: #{color.adjust($color, $lightness: 85%)};
+        --#{$name}-lighten-95: #{color.adjust($color, $lightness: 95%)};
     }
 
     --layoutBackground: var(--fourth);

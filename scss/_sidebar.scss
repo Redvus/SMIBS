@@ -13,7 +13,7 @@
     min-height: 100vh;
     display: block;
     float: left;
-    // background-color: var(--primary);
+    background-color: $sidebarBackground;
     position: relative;
     z-index: 9992;
 
@@ -22,7 +22,7 @@
         width: calc(((100% / 12) * 2) + (#{$headerBlindWidth} / 2));
         height: 100vh;
         display: block;
-        // background-color: var(--primary);
+        background-color: $sidebarBackground;
         position: fixed;
         top: 0;
         left: 0;
