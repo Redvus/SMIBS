@@ -16,7 +16,7 @@ $base-timing: 0.3s;
 
 /*----------  Header  ----------*/
 $headerHeightDesktop: 5rem;
-$headerBackgroundColor: var(--fourth);
+$headerBackgroundColor: var(--third-lighten-95);
 $headerNavWidth: 40px;
 $headerBlindWidth: $headerHeightDesktop + 3rem;
 
@@ -45,13 +45,12 @@ $navLinkColorMobile: var(--fourth);
 /*----------  Footer  ----------*/
 $footerPartWidth: calc(100% / 6);
 $footerLineColor: var(--primary-lighten-10);
-$footerBackground: var(--secondary);
+$footerBackground: var(--third-lighten-95);
 $footerDownBlock: var(--six);
 
 /*----------  Layout  ----------*/
-// $layoutBackground : lighten($primary, 13%);
-$layoutBackground: var(--primary-lighten-13);
-$backgroundLineColor: var(--primary-lighten-85);
+$layoutBackground: var(--fourth);
+$backgroundLineColor: var(--third-lighten-85);
 $wrapperContentInsideWidth: calc(100% - ((#{$headerHeightDesktop} + 3rem) * 2));
 
 $partnersPart: 7;
@@ -88,11 +87,15 @@ $forumBackground: var(--primary);
 $forumPersonWidthMobile: 3rem;
 
 /*----------  Form  ----------*/
-$formInputColor: var(--secondary);
-$formButtonBackground: var(--primary);
+$formInputColor: var(--third);
+$formButtonBackground: var(--third-lighten-95);
 
 /*----------  Sidebar  ----------*/
-$sidebarButtonsBackground: var(--primary-darken-10);
+$sidebarBackground: var(--third-lighten-95);
+$sidebarButtonsBackground: var(--fourth);
+
+/*----------  Login  ----------*/
+$loginTextColor: var(--third);
 
 @mixin rowMachineBorder($numPerRow, $margin, $borderWidth) {
     // width: calc((100% - ((#{$numPerRow} - 1) * #{$margin}) - ((#{$numPerRow} - 1) * (#{$borderWidth} * 2))) / #{$numPerRow});
@@ -363,7 +366,7 @@ body {
     // flex-direction: column;
     // justify-content: space-between;
     margin: 0;
-    background-color: var(--layoutBackground);
+    background-color: $layoutBackground;
     // @extend %scrollbar_body;
 }
 

@@ -247,7 +247,8 @@
     &__hero {
         // @include grid-container;
         width: 100%;
-        height: 27.5vw;
+        // height: 27.5vw;
+        height: auto;
         display: block;
         position: relative;
         margin-bottom: $marginVert;
@@ -579,15 +580,15 @@
         // @include grid-column(4, $second-grid);
         // width: calc(((100% / 12) * 4) - #{$marginVert} - (#{$frontAnniversaryBorder} * 2));
         // height: calc(100% - (#{$frontAnniversaryBorder} * 2));
-        width: calc(((100% / 12) * 4) - #{$marginVert});
+        width: calc(((100% / 12) * 4) - #{$marginVert} - ($border_thin * 2));
         // height: 100%;
-        height: 27.5vw;
+        height: calc(27.5vw - ($border_thin * 2));
         display: block;
         float: left;
         position: relative;
-        background-color: var(--primary);
+        background-color: var(--fourth);
         margin-left: $marginVert;
-        // border: $frontAnniversaryBorder solid var(--secondary);
+        border: $border_thin solid var(--third-lighten-50);
         // overflow: hidden;
 
         #galleryAnniversary {
@@ -620,7 +621,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            background-color: var(--secondary);
+            background-color: var(--fourth);
             padding: 0 0.5rem;
         }
 
@@ -634,7 +635,7 @@
                 family: var(--heading-font);
                 size: var(--font-size-h1);
             }
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         &-month {
@@ -647,7 +648,7 @@
                 family: var(--heading-font);
                 size: var(--font-size-small);
             }
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         picture.main-content__anniversary-photo {
@@ -713,7 +714,7 @@
             align-items: center;
             justify-content: center;
             padding: calc(#{$marginVert} / 4);
-            background-color: $sidebarButtonsBackground;
+            background-color: var(--third-lighten-95);
 
             h3 {
                 text-align: center;

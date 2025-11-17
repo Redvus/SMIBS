@@ -15,7 +15,7 @@
     top: 0;
     right: 0;
     // margin-bottom: 2rem;
-    background-color: $headerBackgroundColor;
+    background-color: $layoutBackground;
     // border-bottom: 0.5rem solid var(--secondary);
     box-shadow: 0 0.1rem 0.1rem rgba(var(--third), 0.2);
     z-index: 9990;
@@ -68,7 +68,7 @@
         display: block;
         float: left;
         position: relative;
-        background-color: var(--primary);
+        background-color: $headerBackgroundColor;
         padding-left: calc(#{$marginVert} - #{$navLinkPadding});
     }
 

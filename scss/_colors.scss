@@ -12,7 +12,7 @@ $colors: (
     // Бордовый
     third: #000,
     // Темный var1: #1E252B
-    fourth: #fff,
+    fourth: #ffffff,
     five: #7a97ab,
     six: #b60b00,
 );
@@ -38,6 +38,8 @@ $colors: (
         --#{$name}-lighten-60: #{color.adjust($color, $lightness: 60%)};
         --#{$name}-lighten-70: #{color.adjust($color, $lightness: 70%)};
         --#{$name}-lighten-85: #{color.adjust($color, $lightness: 85%)};
+        --#{$name}-lighten-90: #{color.adjust($color, $lightness: 90%)};
+        --#{$name}-lighten-95: #{color.adjust($color, $lightness: 95%)};
     }
 
     --layoutBackground: var(--primary-lighten-13);

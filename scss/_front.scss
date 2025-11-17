@@ -1,4 +1,3 @@
-
 /*====================================
 =            Main content            =
 ====================================*/
@@ -33,7 +32,7 @@
         height: 100%;
         display: block;
         float: left;
-        background-color: $primary;
+        background-color: $headerBackgroundColor;
         margin-left: $marginVert;
     }
 
@@ -86,9 +85,8 @@
             }
 
             &:hover {
-
                 img {
-                    transform: scale(1.05)
+                    transform: scale(1.05);
                 }
             }
         }
@@ -98,9 +96,7 @@
         }
 
         &-all {
-
             &:hover {
-
                 figure:not(:hover) {
                     filter: grayscale(1);
                 }
@@ -131,7 +127,6 @@
         @include grid-column(12, $second-grid);
 
         ul {
-
             li {
                 // @include grid-column(2, $second-grid);
                 @include rowMachine(7, 1rem);
@@ -163,4 +158,3 @@
 }
 
 /*=====  End of Page content  ======*/
-

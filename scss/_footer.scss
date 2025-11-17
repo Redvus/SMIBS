@@ -19,7 +19,7 @@ $footer-grid: (
     position: relative;
     background: $footerBackground;
     bottom: 0;
-    color: var(--fourth);
+    color: var(--secondary);
     z-index: 10;
     overflow: hidden;
 
@@ -45,7 +45,7 @@ $footer-grid: (
         }
 
         a {
-            color: var(--primary);
+            color: var(--secondary);
             font-weight: normal;
 
             &:hover {
@@ -69,7 +69,7 @@ $footer-grid: (
             height: 80%;
 
             path {
-                fill: var(--fourth);
+                fill: var(--secondary);
             }
         }
 
