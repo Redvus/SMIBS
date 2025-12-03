@@ -1,36 +1,39 @@
-.blind {
+@use "fonts" as *;
+@use "sass:color";
+@use "breakpoints" as bp;
+@use "all_variables" as *;
 
+.blind {
     /*----------  Blind Images Color B/W  ----------*/
     &-wb {
-
-        &>.wrapper {
+        & > .wrapper {
             background-color: $blindBackgroundWB;
             color: $blindColorWB;
 
-            &>.header {
+            & > .header {
                 background-color: $blindColorWB;
 
-                &>.header__nav {
+                & > .header__nav {
                     background-color: lighten($blindBackgroundWB, 20%);
 
-                    &>.header__bottom {
+                    & > .header__bottom {
                         background-color: lighten($blindBackgroundWB, 20%);
 
                         .nav-main {
-
                             li {
-
                                 a {
                                     color: $blindColorWB;
                                 }
 
                                 &:hover {
-                                    background-color: lighten($blindBackgroundWB, 20%);
+                                    background-color: lighten(
+                                        $blindBackgroundWB,
+                                        20%
+                                    );
                                 }
                             }
 
                             &__children {
-
                                 ul.submenu {
                                     background-color: $blindColorWB;
 
@@ -46,16 +49,12 @@
                         }
                     }
 
-                    &>.header__top {
+                    & > .header__top {
                         background-color: lighten($blindBackgroundWB, 25%);
 
-                        &>.header__social {
-
+                        & > .header__social {
                             ul {
-
                                 li {
-
-
                                     i {
                                         color: $blindColorWB;
                                     }
@@ -63,7 +62,7 @@
                             }
                         }
 
-                        &>input {
+                        & > input {
                             color: $blindBackgroundWB;
 
                             &::-webkit-input-placeholder {
@@ -91,7 +90,7 @@
                     }
                 }
 
-                &>.header__blind {
+                & > .header__blind {
                     background-color: $blindBackgroundWB;
 
                     & > i {
@@ -100,17 +99,17 @@
                 }
             }
 
-            &>.sidebar {
+            & > .sidebar {
                 background-color: lighten($blindBackgroundWB, 20%);
 
                 &-static {
                     background-color: lighten($blindBackgroundWB, 20%);
                 }
 
-                &>.sidebar__buttons {
+                & > .sidebar__buttons {
                     background-color: $blindBackgroundWB;
 
-                    &>a {
+                    & > a {
                         background-color: lighten($blindBackgroundWB, 25%);
                         border-color: $blindColorWB;
 
@@ -119,7 +118,6 @@
                         }
 
                         picture {
-
                             img {
                                 filter: grayscale(1) invert(0);
                             }
@@ -127,10 +125,8 @@
                     }
                 }
 
-                &>.sidebar__banners {
-
+                & > .sidebar__banners {
                     a {
-
                         picture {
                             img {
                                 filter: grayscale(1);
@@ -139,10 +135,8 @@
                     }
                 }
 
-                &>.sidebar-logo {
-
+                & > .sidebar-logo {
                     svg {
-
                         path {
                             fill: $blindColorWB;
                         }
@@ -153,24 +147,27 @@
                     }
                 }
 
-                &>.sidebar-login {
+                & > .sidebar-login {
                     background-color: $blindBackgroundWB;
 
-                    &>.sidebar-login__top {
-
-                        &>.sidebar-login__form {
-
-                            &>.sidebar-login__block {
-
+                    & > .sidebar-login__top {
+                        & > .sidebar-login__form {
+                            & > .sidebar-login__block {
                                 input {
                                     color: $blindColorWB;
                                     border-color: $blindColorWB;
-                                    background-color: lighten($blindBackgroundWB, 20%);
+                                    background-color: lighten(
+                                        $blindBackgroundWB,
+                                        20%
+                                    );
 
                                     &:focus,
                                     &:visited {
                                         color: $blindColorWB;
-                                        background-color: lighten($blindBackgroundWB, 20%);
+                                        background-color: lighten(
+                                            $blindBackgroundWB,
+                                            20%
+                                        );
                                         border-color: $blindColorWB;
                                         outline: none;
                                     }
@@ -214,19 +211,21 @@
                                 }
                             }
 
-                            &>.sidebar-login__button {
+                            & > .sidebar-login__button {
                                 color: $blindColorWB;
                                 border-color: $blindColorWB;
-                                background-color: lighten($blindBackgroundWB, 20%);
+                                background-color: lighten(
+                                    $blindBackgroundWB,
+                                    20%
+                                );
                             }
                         }
                     }
 
-                    &>.sidebar-login__bottom {
-
+                    & > .sidebar-login__bottom {
                         li {
-
-                            a, i {
+                            a,
+                            i {
                                 color: $blindColorWB;
                             }
                         }
@@ -234,32 +233,30 @@
                 }
             }
 
-            &>.main-content {
-
+            & > .main-content {
                 img {
                     filter: grayscale(1) contrast(1.2) brightness(1.1);
                 }
 
-                &>.main-content__inside {
-
-                    &>.main-content__hero {
-
-                        &>.main-content__intro {
+                & > .main-content__inside {
+                    & > .main-content__hero {
+                        & > .main-content__intro {
                             background-color: $blindColorWB;
                         }
 
-                        &>.main-content__anniversary {
+                        & > .main-content__anniversary {
                             background-color: lighten($blindBackgroundWB, 20%);
 
-                            &>.bx-viewport {
-
+                            & > .bx-viewport {
                                 .main-content__anniversary {
-                                    background-color: lighten($blindBackgroundWB, 20%);
+                                    background-color: lighten(
+                                        $blindBackgroundWB,
+                                        20%
+                                    );
                                 }
                             }
 
                             .main-content__anniversary-slide {
-
                                 .main-content__anniversary-middle {
                                     background-color: $blindBackgroundWB;
                                 }
@@ -267,15 +264,14 @@
                                 .main-content__anniversary-data {
                                     background-color: $blindBackgroundWB;
 
-
                                     span {
                                         color: $blindColorWB;
                                     }
                                 }
 
                                 .main-content__anniversary-birthday {
-
-                                    span, p {
+                                    span,
+                                    p {
                                         color: $blindColorWB;
                                     }
                                 }
@@ -283,47 +279,52 @@
                         }
                     }
 
-                    &>.main-content__read,
-                    &>.main-content__news,
-                    &>.main-content__calendar,
-                    &>.main-content__partners {
-
-                        &>.main-content__news-block {
-
-                            &>.main-content__subheader {
+                    & > .main-content__read,
+                    & > .main-content__news,
+                    & > .main-content__calendar,
+                    & > .main-content__partners {
+                        & > .main-content__news-block {
+                            & > .main-content__subheader {
                                 border-color: $blindColorWB;
                             }
 
                             ul {
-
-                                &>.main-content__news-single {
-
-                                    &>.news-single__title {
-                                        background-color: lighten($blindBackgroundWB, 20%);
+                                & > .main-content__news-single {
+                                    & > .news-single__title {
+                                        background-color: lighten(
+                                            $blindBackgroundWB,
+                                            20%
+                                        );
                                     }
 
-                                    &>.news-single__text {
-                                        background-color: lighten($blindBackgroundWB, 30%);
+                                    & > .news-single__text {
+                                        background-color: lighten(
+                                            $blindBackgroundWB,
+                                            30%
+                                        );
                                     }
 
-                                    &>.news-single__footer {
-
-                                        &>.news-single__date {
-                                            background-color: lighten($blindBackgroundWB, 25%);
+                                    & > .news-single__footer {
+                                        & > .news-single__date {
+                                            background-color: lighten(
+                                                $blindBackgroundWB,
+                                                25%
+                                            );
                                             color: $blindColorWB;
                                         }
 
-                                        &>.news-single__link {
-                                            background-color: lighten($blindBackgroundWB, 20%);
+                                        & > .news-single__link {
+                                            background-color: lighten(
+                                                $blindBackgroundWB,
+                                                20%
+                                            );
                                         }
                                     }
                                 }
                             }
 
-                            &>.main-content__subheader--link {
-
+                            & > .main-content__subheader--link {
                                 a {
-
                                     &:after {
                                         color: $blindColorWB;
                                     }
@@ -331,14 +332,12 @@
                             }
                         }
 
-                        &>.main-content__subheader {
+                        & > .main-content__subheader {
                             border-color: $blindColorWB;
                         }
 
-                        &>.main-content__subheader--link {
-
+                        & > .main-content__subheader--link {
                             a {
-
                                 &:after {
                                     color: $blindColorWB;
                                 }
@@ -346,20 +345,16 @@
                         }
                     }
 
-                    &>.main-content__calendar {
-
-                        &>.main-content__calendar-month {
-
+                    & > .main-content__calendar {
+                        & > .main-content__calendar-month {
                             ul {
-
-                                &>.main-content__calendar-date {
+                                & > .main-content__calendar-date {
                                     border-color: $blindColorWB;
 
-
-                                    &>.calendar-date__data {
+                                    & > .calendar-date__data {
                                         border-color: $blindColorWB;
 
-                                        &>.calendar-date__data-num {
+                                        & > .calendar-date__data-num {
                                             border-color: $blindColorWB;
                                             background-color: $blindBackgroundWB;
 
@@ -369,19 +364,22 @@
                                         }
                                     }
 
-                                    &>.calendar-date__events {
+                                    & > .calendar-date__events {
                                         border-color: $blindColorWB;
 
-                                        &>.calendar-date__data-month {
+                                        & > .calendar-date__data-month {
                                             border-color: $blindColorWB;
-                                            background-color: lighten($blindBackgroundWB, 20%);
+                                            background-color: lighten(
+                                                $blindBackgroundWB,
+                                                20%
+                                            );
 
                                             span {
                                                 color: $blindColorWB;
                                             }
                                         }
 
-                                        &>.calendar-date__data-week {
+                                        & > .calendar-date__data-week {
                                             background-color: $blindBackgroundWB;
 
                                             span {
@@ -394,32 +392,33 @@
                         }
                     }
 
-                    &>.main-content__text {
-
-                        &>.read-content__link {
+                    & > .main-content__text {
+                        & > .read-content__link {
                             color: $blindColorWB;
                             background-color: lighten($blindBackgroundWB, 30%);
                             border-color: $blindColorWB;
                         }
                     }
 
-                    &>.main-content__inside-content {
-
-                        &>.main-content__guest {
-
-                            &>.main-content__guest-message {
+                    & > .main-content__inside-content {
+                        & > .main-content__guest {
+                            & > .main-content__guest-message {
                                 color: $blindColorWB;
-                                background-color: lighten($blindBackgroundWB, 20%);
+                                background-color: lighten(
+                                    $blindBackgroundWB,
+                                    20%
+                                );
 
                                 &:before {
-                                    border-right-color: lighten($blindBackgroundWB, 20%);
+                                    border-right-color: lighten(
+                                        $blindBackgroundWB,
+                                        20%
+                                    );
                                 }
                             }
 
-                            &>.main-content__guest-person {
-
-                                &>.main-content__guest-date {
-
+                            & > .main-content__guest-person {
+                                & > .main-content__guest-date {
                                     span {
                                         color: $blindColorWB;
                                     }
@@ -427,14 +426,12 @@
                             }
                         }
 
-                        &>.main-content__inside-form {
-
-                            &>.form-ajax {
-
-                                input[type='text'],
-                                input[type='email'],
-                                input[type='number'],
-                                input[type='password'],
+                        & > .main-content__inside-form {
+                            & > .form-ajax {
+                                input[type="text"],
+                                input[type="email"],
+                                input[type="number"],
+                                input[type="password"],
                                 textarea {
                                     color: $blindColorWB;
                                     border-color: $blindColorWB !important;
@@ -442,7 +439,10 @@
                                     &:focus,
                                     &:visited {
                                         color: $blindColorWB;
-                                        background-color: lighten($blindBackgroundWB, 20%);
+                                        background-color: lighten(
+                                            $blindBackgroundWB,
+                                            20%
+                                        );
                                         border-color: $blindColorWB;
                                     }
 
@@ -484,28 +484,27 @@
                                     }
                                 }
 
-                                &>.form-ajax__input {
-
-                                    &>.form-ajax__input-rating {
-
-                                        &>.form-ajax__input-description {
+                                & > .form-ajax__input {
+                                    & > .form-ajax__input-rating {
+                                        & > .form-ajax__input-description {
                                             color: $blindColorWB !important;
                                         }
                                     }
                                 }
 
-                                &>.form-ajax__agreement {
-
+                                & > .form-ajax__agreement {
                                     a {
                                         color: $blindColorWB !important;
                                     }
                                 }
 
-                                &>.form-ajax__button {
-
-                                    &>.submit-form {
+                                & > .form-ajax__button {
+                                    & > .submit-form {
                                         color: $blindColorWB;
-                                        background-color: lighten($blindBackgroundWB, 20%);
+                                        background-color: lighten(
+                                            $blindBackgroundWB,
+                                            20%
+                                        );
                                         border-color: $blindColorWB;
                                     }
                                 }
@@ -513,19 +512,16 @@
                         }
                     }
 
-                    &>.main-content__link {
-
-                        &>.main-content__link-block {
+                    & > .main-content__link {
+                        & > .main-content__link-block {
                             color: $blindColorWB;
                             background-color: lighten($blindBackgroundWB, 20%);
                         }
                     }
                 }
 
-                &>.main-content__breadcrumbs {
-
+                & > .main-content__breadcrumbs {
                     li {
-
                         a {
                             color: lighten($blindColorWB, 50%);
                         }
@@ -543,28 +539,26 @@
             }
         }
 
-        p, strong {
+        p,
+        strong {
             color: $blindColorWB;
         }
 
-        &>.footer {
+        & > .footer {
             background-color: $blindBackgroundWB;
 
-            &>.footer__down-block {
+            & > .footer__down-block {
                 background-color: lighten($blindBackgroundWB, 20%);
             }
 
-            &>.footer__line {
-
-                &>span {
+            & > .footer__line {
+                & > span {
                     border-color: lighten($blindBackgroundWB, 20%);
                 }
             }
 
-            >.footer__logo {
-
+            > .footer__logo {
                 svg {
-
                     path {
                         fill: $blindColorWB;
                     }
@@ -575,7 +569,6 @@
                 color: $blindColorWB;
 
                 svg {
-
                     path {
                         fill: $blindColorWB;
                     }

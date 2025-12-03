@@ -17,6 +17,7 @@
         ),
         navWrapper = document.querySelector(".wrapper"),
         navHeaderTop = document.querySelector(".header-top");
+
     function navMenuOpenMobile() {
         let tl = new gsap.timeline({
             reversed: true,
@@ -148,7 +149,7 @@
 	-------------------------------------------------- */
 
     function initPage() {
-        // blindMenuActive();
+        blindMenuActive();
     }
 
     function initPageMobile() {

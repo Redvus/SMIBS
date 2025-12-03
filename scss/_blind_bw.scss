@@ -1,113 +1,108 @@
-.blind {
+@use "fonts" as *;
+@use "sass:color";
+@use "breakpoints" as bp;
+@use "all_variables" as *;
 
+.blind {
     /*----------  Blind Images Color B/W  ----------*/
     &-bw {
+        & > .wrapper {
+            background-color: var(--blindBackgroundBW);
+            color: var(--blindColorBW);
 
-        &>.wrapper {
-            background-color: $blindBackgroundBW;
-            color: $blindColorBW;
+            & > .header {
+                background-color: var(--blindColorBW);
 
-            &>.header {
-                background-color: $blindColorBW;
+                & > .header__nav {
+                    background-color: var(--third-lighten-20);
 
-                &>.header__nav {
-                    background-color: lighten($blindBackgroundBW, 20%);
-
-                    &>.header__bottom {
-                        background-color: lighten($blindBackgroundBW, 20%);
+                    & > .header__bottom {
+                        background-color: var(--third-lighten-20);
 
                         .nav-main {
-
                             li {
-
                                 a {
-                                    color: $blindBackgroundWB;
+                                    color: var(--blindBackgroundWB);
                                 }
 
                                 &:hover {
-                                    background-color: lighten($blindBackgroundBW, 20%);
+                                    background-color: var(--third-lighten-20);
                                 }
                             }
 
                             &__children {
-
                                 ul.submenu {
-                                    background-color: $blindColorWB;
+                                    background-color: var(--blindColorWB);
                                 }
                             }
                         }
                     }
 
-                    &>.header__top {
-                        background-color: lighten($blindBackgroundBW, 25%);
+                    & > .header__top {
+                        background-color: var(--third-lighten-25);
 
-                        &>.header__social {
-
+                        & > .header__social {
                             ul {
-
                                 li {
-
-
                                     i {
-                                        color: $blindColorBW;
+                                        color: var(--blindColorBW);
                                     }
                                 }
                             }
                         }
 
-                        &>input {
-                            color: $blindBackgroundBW;
+                        & > input {
+                            color: var(--blindBackgroundBW);
 
                             &::-webkit-input-placeholder {
                                 /* WebKit browsers */
-                                color: $blindBackgroundBW;
+                                color: var(--blindBackgroundBW);
                             }
 
                             &::-moz-placeholder {
                                 /* Mozilla Firefox 4 to 18 */
-                                color: $blindBackgroundBW;
+                                color: var(--blindBackgroundBW);
                                 opacity: 1;
                             }
 
                             &::-moz-placeholder {
                                 /* Mozilla Firefox 19+ */
-                                color: $blindBackgroundBW;
+                                color: var(--blindBackgroundBW);
                                 opacity: 1;
                             }
 
                             &::-ms-input-placeholder {
                                 /* Internet Explorer 10+ */
-                                color: $blindBackgroundBW;
+                                color: var(--blindBackgroundBW);
                             }
                         }
                     }
                 }
 
-                &>.header__blind {
-                    background-color: $blindBackgroundBW;
+                & > .header__blind {
+                    background-color: var(--blindBackgroundBW);
                 }
             }
 
-            &>.sidebar {
-                background-color: lighten($blindBackgroundBW, 20%);
+            & > .sidebar {
+                background-color: var(--third-lighten-20);
 
                 &-static {
-                    background-color: lighten($blindBackgroundBW, 20%);
+                    background-color: var(--third-lighten-20);
                 }
 
-                &>.sidebar__buttons {
-                    background-color: $blindBackgroundBW;
+                & > .sidebar__buttons {
+                    background-color: var(--blindBackgroundBW);
 
-                    &>a {
-                        background-color: lighten($blindBackgroundBW, 25%);
-                        border-color: $blindColorBW;
+                    & > a {
+                        background-color: var(--third-lighten-25);
+                        border-color: var(--blindColorBW);
 
                         span {
-                            color: $blindColorBW;
+                            color: var(--blindColorBW);
                         }
 
                         picture {
-
                             img {
                                 filter: grayscale(1) invert(1);
                             }
@@ -115,10 +110,8 @@
                     }
                 }
 
-                &>.sidebar__banners {
-
+                & > .sidebar__banners {
                     a {
-
                         picture {
                             img {
                                 filter: grayscale(1);
@@ -127,12 +120,10 @@
                     }
                 }
 
-                &>.sidebar-logo {
-
+                & > .sidebar-logo {
                     svg {
-
                         path {
-                            fill: $blindColorBW;
+                            fill: var(--blindColorBW);
                         }
                     }
 
@@ -141,25 +132,24 @@
                     }
                 }
 
-                &>.sidebar-login {
-                    background-color: $blindBackgroundBW;
+                & > .sidebar-login {
+                    background-color: var(--blindBackgroundBW);
 
-                    &>.sidebar-login__top {
-
-                        &>.sidebar-login__form {
-
-                            &>.sidebar-login__block {
-
+                    & > .sidebar-login__top {
+                        & > .sidebar-login__form {
+                            & > .sidebar-login__block {
                                 input {
-                                    color: $blindColorBW;
-                                    border-color: $blindColorBW;
-                                    background-color: lighten($blindBackgroundBW, 20%);
+                                    color: var(--blindColorBW);
+                                    border-color: var(--blindColorBW);
+                                    background-color: var(--third-lighten-20);
 
                                     &:focus,
                                     &:visited {
-                                        color: $blindColorBW;
-                                        background-color: lighten($blindBackgroundBW, 20%);
-                                        border-color: $blindColorBW;
+                                        color: var(--blindColorBW);
+                                        background-color: var(
+                                            --third-lighten-20
+                                        );
+                                        border-color: var(--blindColorBW);
                                         outline: none;
                                     }
 
@@ -180,200 +170,194 @@
 
                                     &::-webkit-input-placeholder {
                                         /* WebKit browsers */
-                                        color: rgba($blindColorBW, 0.7);
+                                        color: rgba(var(--blindColorBW), 0.7);
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 4 to 18 */
-                                        color: rgba($blindColorBW, 0.7);
+                                        color: rgba(var(--blindColorBW), 0.7);
                                         opacity: 1;
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 19+ */
-                                        color: rgba($blindColorBW, 0.7);
+                                        color: rgba(var(--blindColorBW), 0.7);
                                         opacity: 1;
                                     }
 
                                     &::-ms-input-placeholder {
                                         /* Internet Explorer 10+ */
-                                        color: rgba($blindColorBW, 0.7);
+                                        color: rgba(var(--blindColorBW), 0.7);
                                     }
                                 }
                             }
 
-                            &>.sidebar-login__button {
-                                color: $blindColorBW;
-                                border-color: $blindColorBW;
-                                background-color: lighten($blindBackgroundBW, 20%);
+                            & > .sidebar-login__button {
+                                color: var(--blindColorBW);
+                                border-color: var(--blindColorBW);
+                                background-color: var(--third-lighten-20);
                             }
                         }
                     }
 
-                    &>.sidebar-login__bottom {
-
+                    & > .sidebar-login__bottom {
                         li {
-
-                            a, i {
-                                color: $blindColorBW;
+                            a,
+                            i {
+                                color: var(--blindColorBW);
                             }
                         }
                     }
                 }
             }
 
-            &>.main-content {
-
+            & > .main-content {
                 img {
                     filter: grayscale(1) contrast(1.2) brightness(1.1);
                 }
 
-                &>.main-content__inside {
-
-                    &>.main-content__hero {
-
-                        &>.main-content__intro {
-                            background-color: $blindColorBW;
+                & > .main-content__inside {
+                    & > .main-content__hero {
+                        & > .main-content__intro {
+                            background-color: var(--blindColorBW);
                         }
 
-                        &>.main-content__anniversary {
-                            background-color: lighten($blindBackgroundBW, 20%);
+                        & > .main-content__anniversary {
+                            background-color: var(--third-lighten-20);
 
-                            &>.bx-viewport {
-
+                            & > .bx-viewport {
                                 .main-content__anniversary {
-                                    background-color: lighten($blindBackgroundBW, 20%);
+                                    background-color: var(--third-lighten-20);
                                 }
                             }
 
                             .main-content__anniversary-slide {
-
                                 .main-content__anniversary-middle {
-                                    background-color: $blindBackgroundBW;
+                                    background-color: var(--blindBackgroundBW);
                                 }
 
                                 .main-content__anniversary-data {
-                                    background-color: $blindBackgroundBW;
-
+                                    background-color: var(--blindBackgroundBW);
 
                                     span {
-                                        color: $blindColorBW;
+                                        color: var(--blindColorBW);
                                     }
                                 }
 
                                 .main-content__anniversary-birthday {
-
-                                    span, p {
-                                        color: $blindColorBW;
+                                    span,
+                                    p {
+                                        color: var(--blindColorBW);
                                     }
                                 }
                             }
                         }
                     }
 
-                    &>.main-content__read,
-                    &>.main-content__news,
-                    &>.main-content__calendar,
-                    &>.main-content__partners {
-
-                        &>.main-content__news-block {
-
-                            &>.main-content__subheader {
-                                border-color: $blindColorBW;
+                    & > .main-content__read,
+                    & > .main-content__news,
+                    & > .main-content__calendar,
+                    & > .main-content__partners {
+                        & > .main-content__news-block {
+                            & > .main-content__subheader {
+                                border-color: var(--blindColorBW);
                             }
 
                             ul {
-
-                                &>.main-content__news-single {
-
-                                    &>.news-single__title {
-                                        background-color: lighten($blindBackgroundBW, 20%);
+                                & > .main-content__news-single {
+                                    & > .news-single__title {
+                                        background-color: var(
+                                            --third-lighten-20
+                                        );
                                     }
 
-                                    &>.news-single__text {
-                                        background-color: lighten($blindBackgroundBW, 30%);
+                                    & > .news-single__text {
+                                        background-color: var(
+                                            --third-lighten-30
+                                        );
                                     }
 
-                                    &>.news-single__footer {
-
-                                        &>.news-single__date {
-                                            background-color: lighten($blindBackgroundBW, 25%);
-                                            color: $blindColorBW;
+                                    & > .news-single__footer {
+                                        & > .news-single__date {
+                                            background-color: var(
+                                                --third-lighten-20
+                                            );
+                                            color: var(--blindColorBW);
                                         }
 
-                                        &>.news-single__link {
-                                            background-color: lighten($blindBackgroundBW, 20%);
+                                        & > .news-single__link {
+                                            background-color: var(
+                                                --third-lighten-20
+                                            );
                                         }
                                     }
                                 }
                             }
 
-                            &>.main-content__subheader--link {
-
+                            & > .main-content__subheader--link {
                                 a {
-
                                     &:after {
-                                        color: $blindColorBW;
+                                        color: var(--blindColorBW);
                                     }
                                 }
                             }
                         }
 
-                        &>.main-content__subheader {
-                            border-color: $blindColorBW;
+                        & > .main-content__subheader {
+                            border-color: var(--blindColorBW);
                         }
 
-                        &>.main-content__subheader--link {
-
+                        & > .main-content__subheader--link {
                             a {
-
                                 &:after {
-                                    color: $blindColorBW;
+                                    color: var(--blindColorBW);
                                 }
                             }
                         }
                     }
 
-                    &>.main-content__calendar {
-
-                        &>.main-content__calendar-month {
-
+                    & > .main-content__calendar {
+                        & > .main-content__calendar-month {
                             ul {
+                                & > .main-content__calendar-date {
+                                    border-color: var(--blindColorBW);
 
-                                &>.main-content__calendar-date {
-                                    border-color: $blindColorBW;
+                                    & > .calendar-date__data {
+                                        border-color: var(--blindColorBW);
 
-
-                                    &>.calendar-date__data {
-                                        border-color: $blindColorBW;
-
-                                        &>.calendar-date__data-num {
-                                            border-color: $blindColorBW;
-                                            background-color: $blindBackgroundBW;
+                                        & > .calendar-date__data-num {
+                                            border-color: var(--blindColorBW);
+                                            background-color: var(
+                                                --blindBackgroundBW
+                                            );
 
                                             span {
-                                                color: $blindColorBW;
+                                                color: var(--blindColorBW);
                                             }
                                         }
                                     }
 
-                                    &>.calendar-date__events {
-                                        border-color: $blindColorBW;
+                                    & > .calendar-date__events {
+                                        border-color: var(--blindColorBW);
 
-                                        &>.calendar-date__data-month {
-                                            border-color: $blindColorBW;
-                                            background-color: lighten($blindBackgroundBW, 20%);
+                                        & > .calendar-date__data-month {
+                                            border-color: var(--blindColorBW);
+                                            background-color: var(
+                                                --third-lighten-20
+                                            );
 
                                             span {
-                                                color: $blindColorBW;
+                                                color: var(--blindColorBW);
                                             }
                                         }
 
-                                        &>.calendar-date__data-week {
-                                            background-color: $blindBackgroundBW;
+                                        & > .calendar-date__data-week {
+                                            background-color: var(
+                                                --blindBackgroundBW
+                                            );
 
                                             span {
-                                                color: $blindColorBW;
+                                                color: var(--blindColorBW);
                                             }
                                         }
                                     }
@@ -382,56 +366,53 @@
                         }
                     }
 
-                    &>.main-content__text {
-
-                        &>.read-content__link {
-                            color: $blindColorBW;
-                            background-color: lighten($blindBackgroundBW, 20%);
-                            border-color: $blindColorBW;
+                    & > .main-content__text {
+                        & > .read-content__link {
+                            color: var(--blindColorBW);
+                            background-color: var(--third-lighten-20);
+                            border-color: var(--blindColorBW);
                         }
                     }
 
-                    &>.main-content__inside-content {
-
-                        &>.main-content__guest {
-
-                            &>.main-content__guest-message {
-                                color: $blindColorBW;
-                                background-color: lighten($blindBackgroundBW, 20%);
+                    & > .main-content__inside-content {
+                        & > .main-content__guest {
+                            & > .main-content__guest-message {
+                                color: var(--blindColorBW);
+                                background-color: var(--third-lighten-20);
 
                                 &:before {
-                                    border-right-color: lighten($blindBackgroundBW, 20%);
+                                    border-right-color: var(--third-lighten-20);
                                 }
                             }
 
-                            &>.main-content__guest-person {
-
-                                &>.main-content__guest-date {
-
+                            & > .main-content__guest-person {
+                                & > .main-content__guest-date {
                                     span {
-                                        color: $blindColorBW;
+                                        color: var(--blindColorBW);
                                     }
                                 }
                             }
                         }
 
-                        &>.main-content__inside-form {
-
-                            &>.form-ajax {
-
-                                input[type='text'],
-                                input[type='email'],
-                                input[type='number'],
-                                input[type='password'],
+                        & > .main-content__inside-form {
+                            & > .form-ajax {
+                                input[type="text"],
+                                input[type="email"],
+                                input[type="number"],
+                                input[type="password"],
                                 textarea {
-                                    color: $blindColorBW;
-                                    border-color: $blindColorBW !important;
+                                    color: var(--blindColorBW);
+                                    border-color: var(
+                                        --blindColorBW
+                                    ) !important;
 
                                     &:focus,
                                     &:visited {
-                                        color: $blindColorBW;
-                                        background-color: lighten($blindBackgroundBW, 20%);
-                                        border-color: $blindColorBW;
+                                        color: var(--blindColorBW);
+                                        background-color: var(
+                                            --third-lighten-20
+                                        );
+                                        border-color: var(--blindColorBW);
                                     }
 
                                     &:focus::-webkit-input-placeholder {
@@ -451,71 +432,68 @@
 
                                     &::-webkit-input-placeholder {
                                         /* WebKit browsers */
-                                        color: $blindColorBW;
+                                        color: var(--blindColorBW);
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 4 to 18 */
-                                        color: $blindColorBW;
+                                        color: var(--blindColorBW);
                                         opacity: 1;
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 19+ */
-                                        color: $blindColorBW;
+                                        color: var(--blindColorBW);
                                         opacity: 1;
                                     }
 
                                     &::-ms-input-placeholder {
                                         /* Internet Explorer 10+ */
-                                        color: $blindColorBW;
+                                        color: var(--blindColorBW);
                                     }
                                 }
 
-                                &>.form-ajax__input {
-
-                                    &>.form-ajax__input-rating {
-
-                                        &>.form-ajax__input-description {
-                                            color: $blindColorBW !important;
+                                & > .form-ajax__input {
+                                    & > .form-ajax__input-rating {
+                                        & > .form-ajax__input-description {
+                                            color: var(
+                                                --blindColorBW
+                                            ) !important;
                                         }
                                     }
                                 }
 
-                                &>.form-ajax__agreement {
-
+                                & > .form-ajax__agreement {
                                     a {
-                                        color: $blindColorBW !important;
+                                        color: var(--blindColorBW) !important;
                                     }
                                 }
 
-                                &>.form-ajax__button {
-
-                                    &>.submit-form {
-                                        color: $blindColorBW;
-                                        background-color: lighten($blindBackgroundBW, 20%);
-                                        border-color: $blindColorBW;
+                                & > .form-ajax__button {
+                                    & > .submit-form {
+                                        color: var(--blindColorBW);
+                                        background-color: var(
+                                            --third-lighten-20
+                                        );
+                                        border-color: var(--blindColorBW);
                                     }
                                 }
                             }
                         }
                     }
 
-                    &>.main-content__link {
-
-                        &>.main-content__link-block {
-                            color: $blindColorBW;
-                            background-color: lighten($blindBackgroundBW, 20%);
+                    & > .main-content__link {
+                        & > .main-content__link-block {
+                            color: var(--blindColorBW);
+                            background-color: var(--third-lighten-20);
                         }
                     }
                 }
 
-                &>.main-content__breadcrumbs {
-
+                & > .main-content__breadcrumbs {
                     li {
-
                         a {
-                            color: lighten($blindBackgroundBW, 50%);
+                            color: var(--third-lighten-50);
                         }
                     }
                 }
@@ -526,64 +504,55 @@
             h3,
             h4,
             h5 {
-                color: $blindColorBW;
-                border-color: $blindColorBW;
+                color: var(--blindColorBW);
+                border-color: var(--blindColorBW);
             }
         }
 
-        p, strong {
-            color: $fourth;
+        p,
+        strong {
+            color: var(--fourth);
         }
 
-        &>.footer {
-            background-color: $blindBackgroundBW;
+        & > .footer {
+            background-color: var(--blindBackgroundBW);
 
-            &>.footer__down-block {
-                background-color: lighten($blindBackgroundBW, 20%);
+            & > .footer__down-block {
+                background-color: var(--third-lighten-20);
             }
 
-            &>.footer__line {
-
-                &>span {
-                    border-color: lighten($blindBackgroundBW, 20%);
+            & > .footer__line {
+                & > span {
+                    border-color: var(--third-lighten-20);
                 }
             }
 
-            &>.footer__logo {
-
+            & > .footer__logo {
                 svg {
-
                     path {
-                        fill: $blindColorBW;
+                        fill: var(--blindColorBW);
                     }
                 }
             }
 
             a {
-                color: $blindColorBW;
+                color: var(--blindColorBW);
 
                 svg {
-
                     path {
-                        fill: $blindColorBW;
+                        fill: var(--blindColorBW);
                     }
                 }
-
             }
 
-            &>.footer__social {
-
+            & > .footer__social {
                 ul {
-
                     li {
-
                         svg {
-
                             path {
-                                fill: $blindColorBW;
+                                fill: var(--blindColorBW);
                             }
                         }
-
                     }
                 }
             }

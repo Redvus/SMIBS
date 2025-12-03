@@ -1,5 +1,8 @@
 @use "sass:color";
 @use "breakpoints" as bp;
+@use "./fonts/fontawesome-free-7.0.0-web/scss/fontawesome.scss";
+@use "./fonts/fontawesome-free-7.0.0-web/scss/brands.scss";
+@use "./fonts/fontawesome-free-7.0.0-web/scss/solid.scss";
 
 /*=============================
 =            Fonts            =
@@ -9,7 +12,7 @@
 // @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 // @import url('https://use.fontawesome.com/releases/v5.10.0/css/all.css');
 @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=cyrillic");
-@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+// @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 //
 //$primary-font      : Helvetica, serif;
 //$heading-font      : 'Oswald', sans-serif;
@@ -74,7 +77,7 @@ $font-width-extended: 125%;
     );
     // --font-size-small:   calc(var(--font-size-base) - (var(--font-size-base) / 5));
     --font-size-small: 0.7rem;
-    --font-size-small-adaptive: 1vmax;
+    --font-size-small-adaptive: 0.83vmax;
     --font-size-h1: calc(var(--font-size-base) + 1.3vmax);
     --font-size-h2: calc(var(--font-size-base) + 0.9vmax);
     --font-size-h3: calc(var(--font-size-base) + 0.5vmax);
