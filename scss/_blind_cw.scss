@@ -7,41 +7,40 @@
     /*----------  Blind Images Color C/W  ----------*/
     &-cw {
         & > .wrapper {
-            background-color: $blindBackgroundCW;
-            color: $blindColorCW;
+            background-color: var(--blindBackgroundCW);
+            color: var(--blindColorCW);
 
             & > .header {
-                background-color: $blindColorCW;
+                background-color: var(--blindColorCW);
 
                 & > .header__nav {
-                    background-color: lighten($blindBackgroundCW, 20%);
+                    background-color: var(--blindBackgroundCWL20);
 
                     & > .header__bottom {
-                        background-color: lighten($blindBackgroundCW, 20%);
+                        background-color: var(--blindBackgroundCWL20);
 
                         .nav-main {
                             li {
                                 a {
-                                    color: $blindColorCW;
+                                    color: var(--blindColorCW);
                                 }
 
                                 &:hover {
-                                    background-color: lighten(
-                                        $blindBackgroundCW,
-                                        20%
+                                    background-color: var(
+                                        --blindBackgroundCWL20
                                     );
                                 }
                             }
 
                             &__children {
                                 ul.submenu {
-                                    background-color: $blindColorCW;
+                                    background-color: var(--blindColorCW);
 
                                     a {
-                                        color: $blindBackgroundCW;
+                                        color: var(--blindBackgroundCW);
 
                                         &:hover {
-                                            color: $blindColorCW;
+                                            color: var(--blindColorCW);
                                         }
                                     }
                                 }
@@ -50,71 +49,71 @@
                     }
 
                     & > .header__top {
-                        background-color: lighten($blindBackgroundCW, 25%);
+                        background-color: var(--blindBackgroundCWL25);
 
                         & > .header__social {
                             ul {
                                 li {
                                     i {
-                                        color: $blindColorCW;
+                                        color: var(--blindColorCW);
                                     }
                                 }
                             }
                         }
 
                         & > input {
-                            color: $blindBackgroundCW;
+                            color: var(--blindBackgroundCW);
 
                             &::-webkit-input-placeholder {
                                 /* WebKit browsers */
-                                color: $blindBackgroundCW;
+                                color: var(--blindBackgroundCW);
                             }
 
                             &::-moz-placeholder {
                                 /* Mozilla Firefox 4 to 18 */
-                                color: $blindBackgroundCW;
+                                color: var(--blindBackgroundCW);
                                 opacity: 1;
                             }
 
                             &::-moz-placeholder {
                                 /* Mozilla Firefox 19+ */
-                                color: $blindBackgroundCW;
+                                color: var(--blindBackgroundCW);
                                 opacity: 1;
                             }
 
                             &::-ms-input-placeholder {
                                 /* Internet Explorer 10+ */
-                                color: $blindBackgroundCW;
+                                color: var(--blindBackgroundCW);
                             }
                         }
                     }
                 }
 
                 & > .header__blind {
-                    background-color: $blindBackgroundCW;
+                    background-color: var(--blindBackgroundCW);
 
                     & > i {
-                        color: $blindColorCW;
+                        color: var(--blindColorCW);
                     }
                 }
             }
 
             & > .sidebar {
-                background-color: lighten($blindBackgroundCW, 20%);
+                background-color: var(--blindBackgroundCWL20);
 
                 &-static {
-                    background-color: lighten($blindBackgroundCW, 20%);
+                    background-color: var(--blindBackgroundCWL20);
                 }
 
                 & > .sidebar__buttons {
-                    background-color: $blindBackgroundCW;
+                    background-color: var(--blindBackgroundCW);
 
                     & > a {
-                        background-color: lighten($blindBackgroundCW, 25%);
-                        border-color: $blindColorCW;
+                        background-color: var(--blindBackgroundCWL25);
+                        border-color: var(--blindColorCW);
 
                         span {
-                            color: $blindColorCW;
+                            color: var(--blindColorCW);
                         }
 
                         picture {
@@ -138,7 +137,7 @@
                 & > .sidebar-logo {
                     svg {
                         path {
-                            fill: $blindColorCW;
+                            fill: var(--blindColorCW);
                         }
                     }
 
@@ -148,27 +147,25 @@
                 }
 
                 & > .sidebar-login {
-                    background-color: $blindBackgroundCW;
+                    background-color: var(--blindBackgroundCW);
 
                     & > .sidebar-login__top {
                         & > .sidebar-login__form {
                             & > .sidebar-login__block {
                                 input {
-                                    color: $blindColorCW;
-                                    border-color: $blindColorCW;
-                                    background-color: lighten(
-                                        $blindBackgroundCW,
-                                        20%
+                                    color: var(--blindColorCW);
+                                    border-color: var(--blindColorCW);
+                                    background-color: var(
+                                        --blindBackgroundCWL20
                                     );
 
                                     &:focus,
                                     &:visited {
-                                        color: $blindColorCW;
-                                        background-color: lighten(
-                                            $blindBackgroundCW,
-                                            20%
+                                        color: var(--blindColorCW);
+                                        background-color: var(
+                                            --blindBackgroundCWL20
                                         );
-                                        border-color: $blindColorCW;
+                                        border-color: var(--blindColorCW);
                                         outline: none;
                                     }
 
@@ -189,35 +186,32 @@
 
                                     &::-webkit-input-placeholder {
                                         /* WebKit browsers */
-                                        color: rgba($blindColorCW, 0.7);
+                                        color: rgba(var(--blindColorCW), 0.7);
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 4 to 18 */
-                                        color: rgba($blindColorCW, 0.7);
+                                        color: rgba(var(--blindColorCW), 0.7);
                                         opacity: 1;
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 19+ */
-                                        color: rgba($blindColorCW, 0.7);
+                                        color: rgba(var(--blindColorCW), 0.7);
                                         opacity: 1;
                                     }
 
                                     &::-ms-input-placeholder {
                                         /* Internet Explorer 10+ */
-                                        color: rgba($blindColorCW, 0.7);
+                                        color: rgba(var(--blindColorCW), 0.7);
                                     }
                                 }
                             }
 
                             & > .sidebar-login__button {
-                                color: $blindColorCW;
-                                border-color: $blindColorCW;
-                                background-color: lighten(
-                                    $blindBackgroundCW,
-                                    20%
-                                );
+                                color: var(--blindColorCW);
+                                border-color: var(--blindColorCW);
+                                background-color: var(--blindBackgroundCWL20);
                             }
                         }
                     }
@@ -226,7 +220,7 @@
                         li {
                             a,
                             i {
-                                color: $blindColorCW;
+                                color: var(--blindColorCW);
                             }
                         }
                     }
@@ -241,38 +235,37 @@
                 & > .main-content__inside {
                     & > .main-content__hero {
                         & > .main-content__intro {
-                            background-color: $blindColorCW;
+                            background-color: var(--blindColorCW);
                         }
 
                         & > .main-content__anniversary {
-                            background-color: lighten($blindBackgroundCW, 20%);
+                            background-color: var(--blindBackgroundCWL20);
 
                             & > .bx-viewport {
                                 .main-content__anniversary {
-                                    background-color: lighten(
-                                        $blindBackgroundCW,
-                                        20%
+                                    background-color: var(
+                                        --blindBackgroundCWL20
                                     );
                                 }
                             }
 
                             .main-content__anniversary-slide {
                                 .main-content__anniversary-middle {
-                                    background-color: $blindBackgroundCW;
+                                    background-color: var(--blindBackgroundCW);
                                 }
 
                                 .main-content__anniversary-data {
-                                    background-color: $blindBackgroundCW;
+                                    background-color: var(--blindBackgroundCW);
 
                                     span {
-                                        color: $blindColorCW;
+                                        color: var(--blindColorCW);
                                     }
                                 }
 
                                 .main-content__anniversary-birthday {
                                     span,
                                     p {
-                                        color: $blindColorCW;
+                                        color: var(--blindColorCW);
                                     }
                                 }
                             }
@@ -285,38 +278,34 @@
                     & > .main-content__partners {
                         & > .main-content__news-block {
                             & > .main-content__subheader {
-                                border-color: $blindColorCW;
+                                border-color: var(--blindColorCW);
                             }
 
                             ul {
                                 & > .main-content__news-single {
                                     & > .news-single__title {
-                                        background-color: lighten(
-                                            $blindBackgroundCW,
-                                            20%
+                                        background-color: var(
+                                            --blindBackgroundCWL20
                                         );
                                     }
 
                                     & > .news-single__text {
-                                        background-color: lighten(
-                                            $blindBackgroundCW,
-                                            30%
+                                        background-color: var(
+                                            --blindBackgroundCW30
                                         );
                                     }
 
                                     & > .news-single__footer {
                                         & > .news-single__date {
-                                            background-color: lighten(
-                                                $blindBackgroundCW,
-                                                25%
+                                            background-color: var(
+                                                --blindBackgroundCWL25
                                             );
-                                            color: $blindColorCW;
+                                            color: var(--blindColorCW);
                                         }
 
                                         & > .news-single__link {
-                                            background-color: lighten(
-                                                $blindBackgroundCW,
-                                                20%
+                                            background-color: var(
+                                                --blindBackgroundCWL20
                                             );
                                         }
                                     }
@@ -326,20 +315,20 @@
                             & > .main-content__subheader--link {
                                 a {
                                     &:after {
-                                        color: $blindColorCW;
+                                        color: var(--blindColorCW);
                                     }
                                 }
                             }
                         }
 
                         & > .main-content__subheader {
-                            border-color: $blindColorCW;
+                            border-color: var(--blindColorCW);
                         }
 
                         & > .main-content__subheader--link {
                             a {
                                 &:after {
-                                    color: $blindColorCW;
+                                    color: var(--blindColorCW);
                                 }
                             }
                         }
@@ -349,41 +338,44 @@
                         & > .main-content__calendar-month {
                             ul {
                                 & > .main-content__calendar-date {
-                                    border-color: $blindColorCW;
+                                    border-color: var(--blindColorCW);
 
                                     & > .calendar-date__data {
-                                        border-color: $blindColorCW;
+                                        border-color: var(--blindColorCW);
 
                                         & > .calendar-date__data-num {
-                                            border-color: $blindColorCW;
-                                            background-color: $blindBackgroundCW;
+                                            border-color: var(--blindColorCW);
+                                            background-color: var(
+                                                --blindBackgroundCW
+                                            );
 
                                             span {
-                                                color: $blindColorCW;
+                                                color: var(--blindColorCW);
                                             }
                                         }
                                     }
 
                                     & > .calendar-date__events {
-                                        border-color: $blindColorCW;
+                                        border-color: var(--blindColorCW);
 
                                         & > .calendar-date__data-month {
-                                            border-color: $blindColorCW;
-                                            background-color: lighten(
-                                                $blindBackgroundCW,
-                                                20%
+                                            border-color: var(--blindColorCW);
+                                            background-color: var(
+                                                --blindBackgroundCWL20
                                             );
 
                                             span {
-                                                color: $blindColorCW;
+                                                color: var(--blindColorCW);
                                             }
                                         }
 
                                         & > .calendar-date__data-week {
-                                            background-color: $blindBackgroundCW;
+                                            background-color: var(
+                                                --blindBackgroundCW
+                                            );
 
                                             span {
-                                                color: $blindColorCW;
+                                                color: var(--blindColorCW);
                                             }
                                         }
                                     }
@@ -394,25 +386,21 @@
 
                     & > .main-content__text {
                         & > .read-content__link {
-                            color: $blindColorCW;
-                            background-color: lighten($blindBackgroundCW, 30%);
-                            border-color: $blindColorCW;
+                            color: var(--blindColorCW);
+                            background-color: var(--blindBackgroundCWL30);
+                            border-color: var(--blindColorCW);
                         }
                     }
 
                     & > .main-content__inside-content {
                         & > .main-content__guest {
                             & > .main-content__guest-message {
-                                color: $blindColorCW;
-                                background-color: lighten(
-                                    $blindBackgroundCW,
-                                    20%
-                                );
+                                color: var(--blindColorCW);
+                                background-color: var(--blindBackgroundCWL20);
 
                                 &:before {
-                                    border-right-color: lighten(
-                                        $blindBackgroundCW,
-                                        20%
+                                    border-right-color: var(
+                                        --blindBackgroundCWL20
                                     );
                                 }
                             }
@@ -420,7 +408,7 @@
                             & > .main-content__guest-person {
                                 & > .main-content__guest-date {
                                     span {
-                                        color: $blindColorCW;
+                                        color: var(--blindColorCW);
                                     }
                                 }
                             }
@@ -433,17 +421,18 @@
                                 input[type="number"],
                                 input[type="password"],
                                 textarea {
-                                    color: $blindColorCW;
-                                    border-color: $blindColorCW !important;
+                                    color: var(--blindColorCW);
+                                    border-color: var(
+                                        --blindColorCW
+                                    ) !important;
 
                                     &:focus,
                                     &:visited {
-                                        color: $blindColorCW;
-                                        background-color: lighten(
-                                            $blindBackgroundCW,
-                                            20%
+                                        color: var(--blindColorCW);
+                                        background-color: var(
+                                            --blindBackgroundCWL20
                                         );
-                                        border-color: $blindColorCW;
+                                        border-color: var(--blindColorCW);
                                     }
 
                                     &:focus::-webkit-input-placeholder {
@@ -463,49 +452,50 @@
 
                                     &::-webkit-input-placeholder {
                                         /* WebKit browsers */
-                                        color: $blindColorCW;
+                                        color: var(--blindColorCW);
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 4 to 18 */
-                                        color: $blindColorCW;
+                                        color: var(--blindColorCW);
                                         opacity: 1;
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 19+ */
-                                        color: $blindColorCW;
+                                        color: var(--blindColorCW);
                                         opacity: 1;
                                     }
 
                                     &::-ms-input-placeholder {
                                         /* Internet Explorer 10+ */
-                                        color: $blindColorCW;
+                                        color: var(--blindColorCW);
                                     }
                                 }
 
                                 & > .form-ajax__input {
                                     & > .form-ajax__input-rating {
                                         & > .form-ajax__input-description {
-                                            color: $blindColorCW !important;
+                                            color: var(
+                                                --blindColorCW
+                                            ) !important;
                                         }
                                     }
                                 }
 
                                 & > .form-ajax__agreement {
                                     a {
-                                        color: $blindColorCW !important;
+                                        color: var(--blindColorCW) !important;
                                     }
                                 }
 
                                 & > .form-ajax__button {
                                     & > .submit-form {
-                                        color: $blindColorCW;
-                                        background-color: lighten(
-                                            $blindBackgroundCW,
-                                            20%
+                                        color: var(--blindColorCW);
+                                        background-color: var(
+                                            --blindBackgroundCWL20
                                         );
-                                        border-color: $blindColorCW;
+                                        border-color: var(--blindColorCW);
                                     }
                                 }
                             }
@@ -514,8 +504,8 @@
 
                     & > .main-content__link {
                         & > .main-content__link-block {
-                            color: $blindColorCW;
-                            background-color: lighten($blindBackgroundCW, 20%);
+                            color: var(--blindColorCW);
+                            background-color: var(--blindBackgroundCWL20);
                         }
                     }
                 }
@@ -523,7 +513,7 @@
                 & > .main-content__breadcrumbs {
                     li {
                         a {
-                            color: lighten($blindBackgroundCW, 30%);
+                            color: var(--blindBackgroundCWL30);
                         }
                     }
                 }
@@ -534,43 +524,43 @@
             h3,
             h4,
             h5 {
-                color: $blindColorCW;
-                border-color: $blindColorCW;
+                color: var(--blindColorCW);
+                border-color: var(--blindColorCW);
             }
         }
 
         p,
         strong {
-            color: $blindColorCW;
+            color: var(--blindColorCW);
         }
 
         & > .footer {
-            background-color: $blindBackgroundCW;
+            background-color: var(--blindBackgroundCW);
 
             & > .footer__down-block {
-                background-color: lighten($blindBackgroundCW, 20%);
+                background-color: var(--blindBackgroundCWL20);
             }
 
             & > .footer__line {
                 & > span {
-                    border-color: lighten($blindBackgroundCW, 20%);
+                    border-color: var(--blindBackgroundCWL20);
                 }
             }
 
             > .footer__logo {
                 svg {
                     path {
-                        fill: $blindColorCW;
+                        fill: var(--blindColorCW);
                     }
                 }
             }
 
             a {
-                color: $blindColorCW;
+                color: var(--blindColorCW);
 
                 svg {
                     path {
-                        fill: $blindColorCW;
+                        fill: var(--blindColorCW);
                     }
                 }
             }

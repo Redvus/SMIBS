@@ -7,41 +7,40 @@
     /*----------  Blind Images Color Y/B  ----------*/
     &-yb {
         & > .wrapper {
-            background-color: $blindBackgroundYB;
-            color: $blindColorYB;
+            background-color: var(--blindBackgroundYB);
+            color: var(--blindColorYB);
 
             & > .header {
-                background-color: $blindColorYB;
+                background-color: var(--blindColorYB);
 
                 & > .header__nav {
-                    background-color: lighten($blindBackgroundYB, 20%);
+                    background-color: var(--blindBackgroundYBL20);
 
                     & > .header__bottom {
-                        background-color: lighten($blindBackgroundYB, 20%);
+                        background-color: var(--blindBackgroundYBL20);
 
                         .nav-main {
                             li {
                                 a {
-                                    color: $blindColorYB;
+                                    color: var(--blindColorYB);
                                 }
 
                                 &:hover {
-                                    background-color: lighten(
-                                        $blindBackgroundYB,
-                                        20%
+                                    background-color: var(
+                                        --blindBackgroundYBL20
                                     );
                                 }
                             }
 
                             &__children {
                                 ul.submenu {
-                                    background-color: $blindColorYB;
+                                    background-color: var(--blindColorYB);
 
                                     a {
-                                        color: $blindBackgroundYB;
+                                        color: var(--blindBackgroundYB);
 
                                         &:hover {
-                                            color: $blindColorYB;
+                                            color: var(--blindColorYB);
                                         }
                                     }
                                 }
@@ -50,71 +49,71 @@
                     }
 
                     & > .header__top {
-                        background-color: lighten($blindBackgroundYB, 25%);
+                        background-color: var(--blindBackgroundYBL25);
 
                         & > .header__social {
                             ul {
                                 li {
                                     i {
-                                        color: $blindColorYB;
+                                        color: var(--blindColorYB);
                                     }
                                 }
                             }
                         }
 
                         & > input {
-                            color: $blindBackgroundYB;
+                            color: var(--blindBackgroundYB);
 
                             &::-webkit-input-placeholder {
                                 /* WebKit browsers */
-                                color: $blindBackgroundYB;
+                                color: var(--blindBackgroundYB);
                             }
 
                             &::-moz-placeholder {
                                 /* Mozilla Firefox 4 to 18 */
-                                color: $blindBackgroundYB;
+                                color: var(--blindBackgroundYB);
                                 opacity: 1;
                             }
 
                             &::-moz-placeholder {
                                 /* Mozilla Firefox 19+ */
-                                color: $blindBackgroundYB;
+                                color: var(--blindBackgroundYB);
                                 opacity: 1;
                             }
 
                             &::-ms-input-placeholder {
                                 /* Internet Explorer 10+ */
-                                color: $blindBackgroundYB;
+                                color: var(--blindBackgroundYB);
                             }
                         }
                     }
                 }
 
                 & > .header__blind {
-                    background-color: $blindBackgroundYB;
+                    background-color: var(--blindBackgroundYB);
 
                     & > i {
-                        color: $blindColorYB;
+                        color: var(--blindColorYB);
                     }
                 }
             }
 
             & > .sidebar {
-                background-color: lighten($blindBackgroundYB, 20%);
+                background-color: var(--blindBackgroundYBL20);
 
                 &-static {
-                    background-color: lighten($blindBackgroundYB, 20%);
+                    background-color: var(--blindBackgroundYBL20);
                 }
 
                 & > .sidebar__buttons {
-                    background-color: $blindBackgroundYB;
+                    background-color: var(--blindBackgroundYB);
 
                     & > a {
-                        background-color: lighten($blindBackgroundYB, 25%);
-                        border-color: $blindColorYB;
+                        background-color: var(--blindBackgroundYBL25);
+                        border-color: var(--blindColorYB);
 
                         span {
-                            color: $blindColorYB;
+                            color: var(--blindColorYB);
                         }
 
                         picture {
@@ -138,7 +137,7 @@
                 & > .sidebar-logo {
                     svg {
                         path {
-                            fill: $blindColorYB;
+                            fill: var(--blindColorYB);
                         }
                     }
 
@@ -148,27 +147,25 @@
                 }
 
                 & > .sidebar-login {
-                    background-color: $blindBackgroundYB;
+                    background-color: var(--blindBackgroundYB);
 
                     & > .sidebar-login__top {
                         & > .sidebar-login__form {
                             & > .sidebar-login__block {
                                 input {
-                                    color: $blindColorYB;
-                                    border-color: $blindColorYB;
-                                    background-color: lighten(
-                                        $blindBackgroundYB,
-                                        20%
+                                    color: var(--blindColorYB);
+                                    border-color: var(--blindColorYB);
+                                    background-color: var(
+                                        --blindBackgroundYBL20
                                     );
 
                                     &:focus,
                                     &:visited {
-                                        color: $blindColorYB;
-                                        background-color: lighten(
-                                            $blindBackgroundYB,
-                                            20%
+                                        color: var(--blindColorYB);
+                                        background-color: var(
+                                            --blindBackgroundYBL20
                                         );
-                                        border-color: $blindColorYB;
+                                        border-color: var(--blindColorYB);
                                         outline: none;
                                     }
 
@@ -189,35 +186,32 @@
 
                                     &::-webkit-input-placeholder {
                                         /* WebKit browsers */
-                                        color: rgba($blindColorYB, 0.7);
+                                        color: rgba(var(--blindColorYB), 0.7);
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 4 to 18 */
-                                        color: rgba($blindColorYB, 0.7);
+                                        color: rgba(var(--blindColorYB), 0.7);
                                         opacity: 1;
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 19+ */
-                                        color: rgba($blindColorYB, 0.7);
+                                        color: rgba(var(--blindColorYB), 0.7);
                                         opacity: 1;
                                     }
 
                                     &::-ms-input-placeholder {
                                         /* Internet Explorer 10+ */
-                                        color: rgba($blindColorYB, 0.7);
+                                        color: rgba(var(--blindColorYB), 0.7);
                                     }
                                 }
                             }
 
                             & > .sidebar-login__button {
-                                color: $blindColorYB;
-                                border-color: $blindColorYB;
-                                background-color: lighten(
-                                    $blindBackgroundYB,
-                                    20%
-                                );
+                                color: var(--blindColorYB);
+                                border-color: var(--blindColorYB);
+                                background-color: var(--blindBackgroundYBL20);
                             }
                         }
                     }
@@ -226,7 +220,7 @@
                         li {
                             a,
                             i {
-                                color: $blindColorYB;
+                                color: var(--blindColorYB);
                             }
                         }
                     }
@@ -241,38 +235,37 @@
                 & > .main-content__inside {
                     & > .main-content__hero {
                         & > .main-content__intro {
-                            background-color: $blindColorYB;
+                            background-color: var(--blindColorYB);
                         }
 
                         & > .main-content__anniversary {
-                            background-color: lighten($blindBackgroundYB, 20%);
+                            background-color: var(--blindBackgroundYBL20);
 
                             & > .bx-viewport {
                                 .main-content__anniversary {
-                                    background-color: lighten(
-                                        $blindBackgroundYB,
-                                        20%
+                                    background-color: var(
+                                        --blindBackgroundYBL20
                                     );
                                 }
                             }
 
                             .main-content__anniversary-slide {
                                 .main-content__anniversary-middle {
-                                    background-color: $blindBackgroundYB;
+                                    background-color: var(--blindBackgroundYB);
                                 }
 
                                 .main-content__anniversary-data {
-                                    background-color: $blindBackgroundYB;
+                                    background-color: var(--blindBackgroundYB);
 
                                     span {
-                                        color: $blindColorYB;
+                                        color: var(--blindColorYB);
                                     }
                                 }
 
                                 .main-content__anniversary-birthday {
                                     span,
                                     p {
-                                        color: $blindColorYB;
+                                        color: var(--blindColorYB);
                                     }
                                 }
                             }
@@ -285,38 +278,34 @@
                     & > .main-content__partners {
                         & > .main-content__news-block {
                             & > .main-content__subheader {
-                                border-color: $blindColorYB;
+                                border-color: var(--blindColorYB);
                             }
 
                             ul {
                                 & > .main-content__news-single {
                                     & > .news-single__title {
-                                        background-color: lighten(
-                                            $blindBackgroundYB,
-                                            20%
+                                        background-color: var(
+                                            --blindBackgroundYBL20
                                         );
                                     }
 
                                     & > .news-single__text {
-                                        background-color: lighten(
-                                            $blindBackgroundYB,
-                                            30%
+                                        background-color: var(
+                                            --blindBackgroundYBL30
                                         );
                                     }
 
                                     & > .news-single__footer {
                                         & > .news-single__date {
-                                            background-color: lighten(
-                                                $blindBackgroundYB,
-                                                25%
+                                            background-color: var(
+                                                --blindBackgroundYBL25
                                             );
-                                            color: $blindColorYB;
+                                            color: var(--blindColorYB);
                                         }
 
                                         & > .news-single__link {
-                                            background-color: lighten(
-                                                $blindBackgroundYB,
-                                                20%
+                                            background-color: var(
+                                                --blindBackgroundYBL20
                                             );
                                         }
                                     }
@@ -326,20 +315,20 @@
                             & > .main-content__subheader--link {
                                 a {
                                     &:after {
-                                        color: $blindColorYB;
+                                        color: var(--blindColorYB);
                                     }
                                 }
                             }
                         }
 
                         & > .main-content__subheader {
-                            border-color: $blindColorYB;
+                            border-color: var(--blindColorYB);
                         }
 
                         & > .main-content__subheader--link {
                             a {
                                 &:after {
-                                    color: $blindColorYB;
+                                    color: var(--blindColorYB);
                                 }
                             }
                         }
@@ -349,41 +338,44 @@
                         & > .main-content__calendar-month {
                             ul {
                                 & > .main-content__calendar-date {
-                                    border-color: $blindColorYB;
+                                    border-color: var(--blindColorYB);
 
                                     & > .calendar-date__data {
-                                        border-color: $blindColorYB;
+                                        border-color: var(--blindColorYB);
 
                                         & > .calendar-date__data-num {
-                                            border-color: $blindColorYB;
-                                            background-color: $blindBackgroundYB;
+                                            border-color: var(--blindColorYB);
+                                            background-color: var(
+                                                --blindBackgroundYB
+                                            );
 
                                             span {
-                                                color: $blindColorYB;
+                                                color: var(--blindColorYB);
                                             }
                                         }
                                     }
 
                                     & > .calendar-date__events {
-                                        border-color: $blindColorYB;
+                                        border-color: var(--blindColorYB);
 
                                         & > .calendar-date__data-month {
-                                            border-color: $blindColorYB;
-                                            background-color: lighten(
-                                                $blindBackgroundYB,
-                                                20%
+                                            border-color: var(--blindColorYB);
+                                            background-color: var(
+                                                --blindBackgroundYBL20
                                             );
 
                                             span {
-                                                color: $blindColorYB;
+                                                color: var(--blindColorYB);
                                             }
                                         }
 
                                         & > .calendar-date__data-week {
-                                            background-color: $blindBackgroundYB;
+                                            background-color: var(
+                                                --blindBackgroundYB
+                                            );
 
                                             span {
-                                                color: $blindColorYB;
+                                                color: var(--blindColorYB);
                                             }
                                         }
                                     }
@@ -394,25 +386,21 @@
 
                     & > .main-content__text {
                         & > .read-content__link {
-                            color: $blindColorYB;
-                            background-color: lighten($blindBackgroundYB, 30%);
-                            border-color: $blindColorYB;
+                            color: var(--blindColorYB);
+                            background-color: var(--blindBackgroundYBL30);
+                            border-color: var(--blindColorYB);
                         }
                     }
 
                     & > .main-content__inside-content {
                         & > .main-content__guest {
                             & > .main-content__guest-message {
-                                color: $blindColorYB;
-                                background-color: lighten(
-                                    $blindBackgroundYB,
-                                    20%
-                                );
+                                color: var(--blindColorYB);
+                                background-color: var(--blindBackgroundYBL20);
 
                                 &:before {
-                                    border-right-color: lighten(
-                                        $blindBackgroundYB,
-                                        20%
+                                    border-right-color: var(
+                                        --blindBackgroundYBL20
                                     );
                                 }
                             }
@@ -420,7 +408,7 @@
                             & > .main-content__guest-person {
                                 & > .main-content__guest-date {
                                     span {
-                                        color: $blindColorYB;
+                                        color: var(--blindColorYB);
                                     }
                                 }
                             }
@@ -433,17 +421,18 @@
                                 input[type="number"],
                                 input[type="password"],
                                 textarea {
-                                    color: $blindColorYB;
-                                    border-color: $blindColorYB !important;
+                                    color: var(--blindColorYB);
+                                    border-color: var(
+                                        --blindColorYB
+                                    ) !important;
 
                                     &:focus,
                                     &:visited {
-                                        color: $blindColorYB;
-                                        background-color: lighten(
-                                            $blindBackgroundYB,
-                                            20%
+                                        color: var(--blindColorYB);
+                                        background-color: var(
+                                            --blindBackgroundYBL20
                                         );
-                                        border-color: $blindColorYB;
+                                        border-color: var(--blindColorYB);
                                     }
 
                                     &:focus::-webkit-input-placeholder {
@@ -463,49 +452,50 @@
 
                                     &::-webkit-input-placeholder {
                                         /* WebKit browsers */
-                                        color: $blindColorYB;
+                                        color: var(--blindColorYB);
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 4 to 18 */
-                                        color: $blindColorYB;
+                                        color: var(--blindColorYB);
                                         opacity: 1;
                                     }
 
                                     &::-moz-placeholder {
                                         /* Mozilla Firefox 19+ */
-                                        color: $blindColorYB;
+                                        color: var(--blindColorYB);
                                         opacity: 1;
                                     }
 
                                     &::-ms-input-placeholder {
                                         /* Internet Explorer 10+ */
-                                        color: $blindColorYB;
+                                        color: var(--blindColorYB);
                                     }
                                 }
 
                                 & > .form-ajax__input {
                                     & > .form-ajax__input-rating {
                                         & > .form-ajax__input-description {
-                                            color: $blindColorYB !important;
+                                            color: var(
+                                                --blindColorYB
+                                            ) !important;
                                         }
                                     }
                                 }
 
                                 & > .form-ajax__agreement {
                                     a {
-                                        color: $blindColorYB !important;
+                                        color: var(--blindColorYB) !important;
                                     }
                                 }
 
                                 & > .form-ajax__button {
                                     & > .submit-form {
-                                        color: $blindColorYB;
-                                        background-color: lighten(
-                                            $blindBackgroundYB,
-                                            20%
+                                        color: var(--blindColorYB);
+                                        background-color: var(
+                                            --blindBackgroundYBL20
                                         );
-                                        border-color: $blindColorYB;
+                                        border-color: var(--blindColorYB);
                                     }
                                 }
                             }
@@ -514,8 +504,8 @@
 
                     & > .main-content__link {
                         & > .main-content__link-block {
-                            color: $blindColorYB;
-                            background-color: lighten($blindBackgroundYB, 20%);
+                            color: var(--blindColorYB);
+                            background-color: var(--blindBackgroundYBL20);
                         }
                     }
                 }
@@ -523,7 +513,7 @@
                 & > .main-content__breadcrumbs {
                     li {
                         a {
-                            color: $blindColorYB;
+                            color: var(--blindColorYB);
                         }
                     }
                 }
@@ -534,43 +524,43 @@
             h3,
             h4,
             h5 {
-                color: $blindColorYB;
-                border-color: $blindColorYB;
+                color: var(--blindColorYB);
+                border-color: var(--blindColorYB);
             }
         }
 
         p,
         strong {
-            color: $blindColorYB;
+            color: var(--blindColorYB);
         }
 
         & > .footer {
-            background-color: $blindBackgroundYB;
+            background-color: var(--blindBackgroundYB);
 
             & > .footer__down-block {
-                background-color: lighten($blindBackgroundYB, 20%);
+                background-color: var(--blindBackgroundYBL20);
             }
 
             & > .footer__line {
                 & > span {
-                    border-color: lighten($blindBackgroundYB, 20%);
+                    border-color: var(--blindBackgroundYBL20);
                 }
             }
 
             > .footer__logo {
                 svg {
                     path {
-                        fill: $blindColorYB;
+                        fill: var(--blindColorYB);
                     }
                 }
             }
 
             a {
-                color: $blindColorYB;
+                color: var(--blindColorYB);
 
                 svg {
                     path {
-                        fill: $blindColorYB;
+                        fill: var(--blindColorYB);
                     }
                 }
             }

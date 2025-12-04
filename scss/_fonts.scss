@@ -77,7 +77,7 @@ $font-width-extended: 125%;
     );
     // --font-size-small:   calc(var(--font-size-base) - (var(--font-size-base) / 5));
     --font-size-small: 0.7rem;
-    --font-size-small-adaptive: 0.83vmax;
+    --font-size-small-adaptive: 1.55vmin;
     --font-size-h1: calc(var(--font-size-base) + 1.3vmax);
     --font-size-h2: calc(var(--font-size-base) + 0.9vmax);
     --font-size-h3: calc(var(--font-size-base) + 0.5vmax);
