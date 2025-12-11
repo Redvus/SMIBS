@@ -376,6 +376,20 @@
     // 	}
     // }
 
+    @include bp.media-up("XXLarge") {
+        &-text {
+            &--mobile {
+                display: none;
+                visibility: hidden;
+            }
+        }
+
+        &--mobile {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
     @include bp.media-up("XLarge") {
         &-text {
             &--mobile {
