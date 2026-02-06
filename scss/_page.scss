@@ -2572,7 +2572,8 @@
 
         &-description {
             display: block;
-            position: absolute;
+            position: relative;
+            float: left;
             left: 0;
             bottom: 0;
             padding: calc(#{$marginVert} / 4) calc(#{$marginVert} / 2) 0 0;
@@ -2581,6 +2582,8 @@
         }
 
         @include bp.media-up("Medium") {
+            width: 100%;
+            margin: 0;
             // &-image {
 
             // 	&--half {

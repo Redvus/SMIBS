@@ -206,7 +206,8 @@ $sidebarButtonsBackground: var(--primary-darken-10);
     @include bp.media-up("Small") {
         &:nth-child(n) {
             width: calc(
-                (100% - ((#{$numPerRow} - 1) * (#{$padding} / 0.5))) / #{$numPerRow}
+                (100% - ((#{$numPerRow} - 1) * (#{$padding} / 0.5))) /
+                    #{$numPerRow}
             );
             padding: calc(#{$padding} / 2);
         }
